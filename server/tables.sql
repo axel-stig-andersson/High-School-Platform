@@ -1,0 +1,1 @@
+INSERT INTO mandatory VALUES (1,1)

@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="client.css">
+
+    <title>Gymnasiehandboken</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+
+    <!--=====================NAVBAR=========================-->
+  <nav class="navbar navbar-expand-lg navbar-custom" id="navbar">
+        <!--===========STARTSIDA Gymnasieguiden-knapp=================-->
+    <a class="navbar-brand" id="navbar_title" href="#">Gymnasiehandboken</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> 
+      </button>
+
+      
+      <!--===================ÄMNEN============================-->
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav align-items-center">
+
+            <!--====================== KNAPPAR TILL SAKER =========================-->
+
+            <!--FÖLJANDE RADER VET JAG INTE OM DE BEHÖVS TILL NÅGOT-->
+        <!--#######################################################################-->
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <!--#######################################################################-->
+          <li class="navbar_button" type="button"> 
+            <a class="navlinks" id="home_button" href="#" style="color:white;">Hem &nbsp;<span class="sr-only">(current)</span></a>
+            <a class="navlinks" id="subjects_button" href="#" style="color:white;">Ämnen & Kurser &nbsp;<span class="sr-only">(current)</span></a>
+            <a class="navlinks" id="plan_button" href="#" style="color:white;">Planera min utbildning &nbsp;<span class="sr-only">(current)</span></a>
+            <a class="navlinks" id="contact_button" href="#" style="color:white;">Kontakta oss &nbsp;<span class="sr-only">(current)</span></a>
+          </li> 
+  
+      </ul> 
+    </div> 
+    <div class="collapse navbar-collapse" id="navbar_right"> 
+        <ul class="navbar-nav ml-auto">
+          <li class="right_menu_button" id="right_menu_button">
+            <a class="shop textfont" id="log_in" href="#" onclick="showLogInView()" style="color:white;">Logga in</a>
+          </li>
+        </ul>
+    </div>  
+    
+        
+  </nav> 
+    <!--========================CONTAINERTIME==============================-->
+    <div id="container">
+
+    </div>
+
+
+
+          <!--================= START-view =========================-->
+        <script id="view_start" type="text/html">
+        <!-- Slideshow -->
+          <div id="startcarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#startcarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#startcarousel" data-slide-to="1"></li>
+              <li data-target="#startcarousel" data-slide-to="2"></li> 
+
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="overlay-image" style="background-image: url(/images/klassrum1.jpg);"></div> 
+                <div class="container startcar-cont">
+                  <h1 class="main-h1"> Välkommen till Gymnasiehandboken</h1>
+                  <p>Att studera på gymnasiet är svårt. Därför erbjuder vi allt ifrån direkt studiehjälp till hjälpsamma verktyg som
+                    är enkla att använda. Registrera dig som användare direkt för att få den fullständiga upplevelsen! 
+                  </p> 
+                  <div class="btn btn-lg btn-outline-light" onclick="showRegisterView()">Logga in</div>
+                </div>
+                
+              </div>
+              <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(/images/bibliotek.jpg);"></div> 
+                <div class="container startcar-cont">
+                  <h1>Ämnesspecifika studietips</h1>
+                  <p>När du väl har en tydlig uppfattning om vad du kommer att behöva 
+                    åstadkomma i dina gymnasiekurser resultatmässigt, kan det ändå vara knepigt att förstå hur vägen dit bör se ut. 
+                    Med vår ämne för ämne-vägledning får du knepiga betygskriterier och kursmål förklarade för dig, samt får ta del av faktiska 
+                    exempel på hur man uppfyller dem. Surfa in på precis den kurs du funderar på via "Ämnen och kurser" högst upp på sidan!
+                  </p> 
+
+
+                </div> 
+                
+              </div>
+              <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(/images/planera.jpg);"></div> 
+                <div class="container startcar-cont">
+                  <h1>Planera dina studier</h1>
+                  <p>Använd våra funktioner betygskollen och betygsprognosen för att beräkna ditt betygssnitt, samt ta 
+                    reda på hur du kommer att behöva prestera under resten av din gymnasietid för att nå din drömutbildning. Här finner 
+                    du även tips på vilka gymnasiekurser som kan vara viktiga för just ditt drömyrke, allt för att göra din resa så tydlig som möjligt!
+                  </p> 
+                  <div class="btn btn-lg btn-outline-light" onclick="showPlanView()">Ta mig till studieplaneraren</div>
+
+                </div> 
+                
+              </div>
+            </div>
+            <a href="#startcarousel" class="carousel-control-prev" role="button" data-slide="prev">
+              <span class="sr-only">Previous</span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </a>
+            <a href="#startcarousel" class="carousel-control-next" role="button" data-slide="next">
+              <span class="sr-only">Next</span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </a> 
+          </div>
+
+          <!--============== Innehållet på resten av startsidan =================-->
+          <div class="flex-container" style="margin-bottom: 15rem; padding: 30px;">
+            <div class="row startrow align-items-start">
+              <div class="col-sm-4">
+                <div class="card startcard">
+                  <div class="card-body">
+                    <img class="card-img-top" style="height: 10rem; width: 10rem;" src="/images/alert.png" alt="">
+                    <h3 style="margin-top: 15px;">Vad är viktigt för dig?</h3> 
+                    <p style="margin-top: 15px;">Gymnasiet erbjuder mängder av kurser inom alla tänkbara områden, och även om kunskap aldrig är tungt 
+                      att bära så kan det ibland vara svårt att se vitsen med att tillryggalägga åtskilliga timmar av studier 
+                      inom så breda ramar. Läs mer om lärande i allmänhet och varför vi vill främja studiefokus på våra ämnessidor!
+                    </p>
+
+                    <div class="btn btn-outline-light btn-lg" onclick="showSubjects()">
+                      Om våra ämnen
+                    </div> 
+                  </div> 
+                </div> 
+                <div class="card startcard">
+                  <div class="card-body">
+                    <h3 style="padding-bottom: 20px;">Saknas din kurs?</h3>
+                    <p>Om vi för närvarande inte täcker
+                      hela din utbildningsplan, kontakta oss genom att följa länken nedan och tipsa oss direkt!
+                    </p>
+                    <div class="btn btn-outline-light btn-lg">
+                      Kontakta oss
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="card starttext-card">
+                  <div class="card-body starttext-card-body">
+                    <h1 style="margin-bottom:40px;">Studievägledningen du behöver</h1>
+                    <p>Vår vision med gymnasiehandboken kommer ur några observationer angående den hjälp som erbjuds en elev på gymnasiet
+                      med framtiden. I korthet upplever vi att gymnasieskolor generellt är fantastiskt duktiga på att hjälpa dig med nuvarande
+                      kurser, och på att främja själva tanken om eftergymnasiala studier. Däremot känner många att de trots allt har en mycket 
+                      vag bild av vad det innebär att plugga vidare, samt vad som krävs för de utbildningar man intresserar sig av. Dessutom är även 
+                      intern kurshjälp digitalt på skolan ofta begränsad. Mer konkret skapade vi gymnasiehandboken för att: 
+                      <ol>
+                        <li><strong>Studievägledare har ett omöjligt jobb.</strong> Att som ofta ensam "SYV" skräddarsy tips och hjälp för hundratals elever
+                        samtidigt innebär såklart att hjälpen blir mer generisk. Detta är inte varken SYV:ens eller skolans fel, det finns helt enkelt
+                        inte resurser till mer än så. Däremot kan vi som extern part komplettera dem, eftersom vi inte behöver fokusera på den interna undervisningskvaliteten.</li>
+                        <br>
+                        <li><strong>Skolan hinner inte fokusera digitalt.</strong> En tydlig skillnad mellan gymnasiet och universitet är resurser i form
+                        av både pengar och personal. Detta gör att lärarna på en gymnasieskola lägger nästan all sin tid på att föbereda och genomföra
+                        undervisning och examination. I och med detta hänger inte riktigt gymnasiet med i den digitala utvecklingen, och <em>kan inte</em>
+                        erbjuda anpassade digitala plattformar hur gärna de än <em>vill</em> trots att de är mycket kompetenta. På universitet finns
+                        aktuella, välkonstruerade och uppdaterade kurshemsidor och kursrum tillgängliga överallt. På gymnasiet, speciellt kommunalt,
+                        är undervisningen väldigt analog i förhållande till resten av samhällets institutioner. Här kommer vi in i bilden, och 
+                        gör det skolan inte hinner med.</li>
+                        <br>
+                        <li><strong>För många tror att studier inte är deras grej.</strong> Med en bristfällig tillgång till hjälpmedel
+                        och för lite vägledande information är det många ungdomar som tröttnar på skolan för tidigt. När vi intervjuat studenter som pluggar på 
+                        universitet står en sak klar: <em>Alla</em> tycker att studier blir roligare på högskolenivå. På gymnasiet är det kanske 
+                        inte en självklar uppfattning. Dessutom har många svårt att se värdet av att plugga till exempel matematik,
+                        eftersom de inte avser bli "matematiker". Vi vill hjälpa till här. Med lite nya vinklar på varför respektive ämnen är
+                        nyttiga, samt inspirerande insikter från studenter, vill vi sporra dig som fått för dig att eftergymnasiala studier inte är din grej 
+                        till att inse att det är roligt.</li>
+                      </ol> 
+                      
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <!--============== Bottom-panelen =================-->
+
+
+        </script>
+
+        <!--================= subjects-view =========================-->
+        <script id="view_subjects" type="text/html">
+          <div class="row flex-nowrap">
+            <div class="col-sm-2 left-menu-custom">
+              <div class="d-flex flex-column align-items-center" id="sidemenu-subjects">
+                  <h2 style="margin-top:20px;">Ämnen</h2>
+                  <div class="list-group">
+                    <a class="list-group-item list-group-item-action active mylist-items" id="menu-sve" data-toggle="list" href="#sve-view" role="tab" aria-controls="subjects-tab-content">Svenska</a>
+                    <a class="list-group-item list-group-item-action mylist-items" id="menu-eng" data-toggle="list" href="#eng-view" role="tab" aria-controls="subjects-tab-content">Engelska</a>
+                    <a class="list-group-item list-group-item-action mylist-items" id="menu-math" data-toggle="list" href="#math-view" role="tab" aria-controls="subjects-tab-content">Matematik</a>
+                    <a class="list-group-item list-group-item-action mylist-items" id="menu-nat" data-toggle="list" href="#nat-view" role="tab" aria-controls="subjects-tab-content">Naturvetenskap</a>
+                    <a class="list-group-item list-group-item-action mylist-items" id="menu-sam" data-toggle="list" href="#sam-view" role="tab" aria-controls="subjects-tab-content">Samhällsorienterat</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="tab-content" id="subjects-tab-content" style="margin-bottom: 20rem;"> 
+ <!--######################################################################################################################-->
+<!--################################################# SVENSKA ############################################################-->
+ <!--######################################################################################################################-->
+                <div class="tab-pane fade show active" id="sve-view" role="tabpanel" aria-labelledby="menu-sve">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/books.jpg);"></div>
+                  </div>
+                  <div class="container flex-container align-items-left">
+                    <h1 style="color:black;">Svenska</h1>
+                    <p style="margin-top: 20px; color:black">Det svenska aspråket är, förutom tre obligatoriska gymnasiekurser, grunden
+                    i merparten av den dagliga kommunikation som sker i Sverige. Det är viktigt att du, oavsett gymnasieutbildning eller
+                    framtida yrke, behärskar språket till fullo och kan anpassa din användning av det beroende på situation, sammanhang
+                    och rådande kutur. Nedan kan du navigera vidare till resoektive gymnasiekurs, eller läsa lite allmänna råd för studier 
+                    och utveckling i svenska.</p>
+                  </div>
+                    <div class="container flex-container course-links-container">
+                      <ul class="course-links-list">
+                        <li class="courses-links"><a href="#sve-1-view" data-toggle="list" id="menu-sve-1" role="tab" style="color: white;">Ta mig vidare till Svenska 1</a></li>
+                        <li class="courses-links"><a href="#sve-2-view" data-toggle="list" id="menu-sve-2" role="tab" style="color: white;">Ta mig vidare till Svenska 2</a></li>
+                        <li class="courses-links"><a href="#sve-3-view" data-toggle="list" id="menu-sve-3" role="tab" style="color: white;">Ta mig vidare till Svenska 3</a></li> 
+                      </ul>
+                    </div>
+                  <div class="row d-flex"> 
+                    <div class="col col-sm-6">
+                      <div class="container flex-container" style="border: black;">
+                          <div class="card subject-page-card">
+                            <div class="card-body subject-card-body">
+                              <h4 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Ämnets beståndsdelar</h4> 
+                              <p>Ämnet svenska kan beskrivas utifrån fem huvudsakliga delområden, som samtliga bedöms enskilt för att sedan sammanställas i 
+                                ditt betyg i kursen. Hur dessa delområden fokuseras skiljer sig något kurserna sinsemellan, men kärnan utgår alltid från dessa
+                                fem:
+                              </p>
+                              <ul>
+                                <li>Skrivande</li>
+                                <li>Läsförståelse</li>
+                                <li>Talande</li>
+                                <li>Litteratur</li>
+                                <li>Språket i olika sammanhang</li>
+                              </ul>
+                              <p>Genom dessa fem områden ska ämnet sedan ge eleven möjlighet att utveckla nio stycken färdigheter. originalformuleringarna finner du på
+                                <span><a href="https://www.skolverket.se/undervisning/gymnasieskolan/laroplan-program-och-amnen-i-gymnasieskolan/gymnasieprogrammen/amne?url=-996270488%2Fsyllabuscw%2Fjsp%2Fsubject.htm%3FsubjectCode%3DSVE%26tos%3Dgy%26sv.url%3D12.5dfee44715d35a5cdfa92a3&sv.url=12.5dfee44715d35a5cdfa92a3#anchor2" target="_blank">Skolverket.se</a></span>
+                                , men vi har här gjort en språkligt enklare tolkning av dessa för att hjälpa dig förstå dem!
+                              </p> 
+                              <ol>
+                                <li>Du ska kunna tala med ett språk som passar olika situationer, för att kunna förbereda dig och bidra på exempelvis ett möte oavsett sammanhang</li>
+                                <br>
+                                <li>Du ska ha kunskap om vad som är "korrekt" språk. Alltså, om du behöver ska du kunna förbereda ett tal i ett seriöst sammanhang där du har korrekt grammatik och att dina ordval ger ett seriöst intryck.</li>
+                                <br>
+                                <li>Du ska ha viss kunskap om retorik. Det betyder att du i tal eller skrift kan bygga upp texten så att du fångar mottagarens intresse. Även här ska språket vara anpassat för sammanhanget.</li>
+                                <br>
+                                <li>Du ska kunna läsa en text och göra en analys av den, både textens syfte och själva språket. Alltså, både analysera vad texten handlar om och hur bra anpassat språket är. Denna analys ska du sen kunna sammanställa snyggt i text.</li>
+                                <br>
+                                <li>Du ska ha viss kunskap om kända svenska författare och deras verk, samt kunna sätta in dem i olika sammanhang, dvs analysera innebörden av texterna t.ex.</li>
+                                <br>
+                                <li>Du ska ha viss kunskap om olika genrer och stilar i litteratur och annan media.</li>
+                                <br>
+                                <li>Du ska kunna läsa och analysera skönlitterära verk, dvs böcker som inte är vetenskapliga. Alltså, vilken berättarteknik används? Hur är språket anpassat? osv. Analysen ska kunna sammanställas snyggt i skrift.</li>
+                                <br>
+                                <li>Du ska ha kunskap om språkets uppbyggnad. Alltså: vad är rätt grammatik, t.ex.</li>
+                                <br>
+                                <li>Du ska ha kunskap om språkets historia, hur det kom till och hur det har utvecklats.</li>
+                                <br> 
+                              </ol>
+                              <p>Vissa elever har svårt att se syftet med att uppnå allt detta. Se fönstret till höger för att kanske förstå
+                                vitsen med att, oavsett framtida yrken eller intressen, vara duktig på vårt språk. 
+                              </p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col col-sm-6">
+                      <div class="container flex-container" style="border: black;">
+                        <div class="card subject-page-card">
+                          <div class="card-body subject-card-body">
+                            <h4 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Varför behöver du vara bra på svenska?</h4> 
+                            <p>Som du ser i många av de nio färdigheterna i vänstra fönster, samt i det sista av de fem delområdena som ämnet innefattar,
+                              så handlar mycket om anpassningen av språket. Detta är en färdighet som ALLA gynnas av att ha. Hur du brukar språket 
+                              är betydande för hur du uppfattas i många situationer, vare sig du vill det eller inte! Det är med anledning av detta som 
+                              fokuset ofta riktas mot anpassningen, och oavsett om du avser studera till och arbeta som försvarsadvokat eller om du startar 
+                              ett måleri, så kommer tillfällen att uppstå där du gynnas av ett rikt språk som du vet hur man anpassar. 
+                              <br>
+                              <br> 
+                              <strong>Språket är vidare ditt viktigaste verktyg</strong> för att ta del av och sprida kunskap på andra områden. Utan läsvana, trygghet i 
+                              viss komplex språkanvändning och förståelse för anpassning kommer du att gå miste om så mycket kunskap som skulle kunna hjälpa dig på många
+                              plan. Se språket som en förutsättning för att kunna ta del av vad som pågår runt omkring dig, samt som 
+                              ett sätt att enklare och slagkraftigare få människor att förstå dig.
+                              <br>
+                              <br>
+                              <strong>En vuxen människa förväntas kunna</strong> formulera sig proffesionellt och tydligt. Även om du idag går 
+                              på gymnasiet så kommer en tid i yrkeslivet där mycket daglig kommunikation sker formellt, antingen i skrift 
+                              via email eller i tal via möten. Här skapar du genast ett mer fötroendeingivande intryck om du har den språkliga bredden för att 
+                              uttrycka dig så som din mottagare förväntar sig.
+                              <br>
+                              <br>
+                              <strong>Det är din skyldighet</strong> att bidra till att språket fortsätter vara en stor del av en persons bildandeprocess.
+                              Det kanske känns avlägset idag, men många av er som läser detta kommer sannolikt att bli föräldrar en dag, och 
+                              om du inte har tagit dig tiden att bemästra språket minskar sannolikheten att dina barn, och i förlängningen framtida
+                              generationer, ser vikten av detsamma. 
+                            </p>
+                          </div>
+                        </div>
+                        <div class="container flex-container custom-img-container">
+                          <div class="overlay-image-2" style="background-image: url(/images/skap.jpg);"></div>
+                          <div class="container startpage-img-text">
+                            <h2>registrera konto, och få ut maximalt av gymnasiehandboken genom att spara studieplaner, delta i utvecklingen av tjänsten och mycket mer. </h2> 
+                            <div class="btn btn-outline-light btn-lg" style="margin-top: 16px;" onclick="showLogInView()">
+                              Skapa konto
+                            </div> 
+                          </div>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--================================ SVENSKA 1 =====================================-->
+                <div class="tab-pane fade" id="sve-1-view" role="tabpanel" aria-labelledby="menu-sve-1">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/books.jpg);"></div>
+                  </div>
+                  <div class="container flex-container" style="color: black;">
+                    <h1>Svenska 1 - fokus på grunder och bredd</h1>
+                    <p>På huvudsidan för ämnet svenska som du nyss besökte för att hitta hit introducerades ämnets fem huvudsakliga 
+                      delområden, samt de nio egenskaperna som skolverket vill att du ska utveckla under dina studier i svenska på gymnasiet. 
+                      Svenska 1 berör samtliga dessa, och mer konkret är det centrala innehåll (som presenteras nedan) kursens kursspecifika 
+                      sätt att beröra dem. Återigen hänvisar vi till <span><a href="https://www.skolverket.se/undervisning/gymnasieskolan/laroplan-program-och-amnen-i-gymnasieskolan/gymnasieprogrammen/amne?url=-996270488%2Fsyllabuscw%2Fjsp%2Fsubject.htm%3FsubjectCode%3DSVE%26tos%3Dgy%26sv.url%3D12.5dfee44715d35a5cdfa92a3&sv.url=12.5dfee44715d35a5cdfa92a3#anchor2" target="_blank">Skolverket.se</a></span>
+                      för fullständigt central innehåll med deras originalfomruleringar, men nedan har vi sammanställt en enklare förklaring av innehållet för att du ska få en överblick. Ha i åtanke att de direkt motsvarar samma siffra som i beskrivningen på startsidan för svenska.
+                      Nedanför det följer en förklaring av de punkter där vi anser att det kan behövas. Längst ned finner du betygskriterierna samt exempel på hur man uppfyller dessa! 
+                      <h2 style="margin-bottom: 20px;">Centralt innehåll</h2>
+                      <ol>
+                        <li><strong>Muntlig framställning.</strong> Här ligger fokus på grunderna i mottagaranpassning, dvs hur man formulerar ett tal beroende på ämne och situation. Du ska dessutom kunna använda dig av digitala såväl som analoga hjälpmedel, samt lyssna och ge respons på andra elevers tal. </li>
+                        <br>
+                        <li><strong>Skriftlig framställning</strong> i olika former. Även här fokus på att kunna anpassa språket efter given situation eller typ av text, samt att du ska kunna läsa och analysera text både själv och i grupp.</li>
+                        <br>
+                        <li><strong>Argumentationsteknik.</strong> Detta ska kunna tillämpas i tal och skrift, detta förklaras vidare längre ned på sidan.</li>
+                        <br>
+                        <li><strong>Grundläggande retorik.</strong> Detta förklaras vidare längre ned på sidan.</li>
+                        <br>
+                        <li><strong>Bearbetning, sammanfattning och kritisk granskning av text.</strong> Detta innefattar citat och referatteknik såväl som källkritik och frågor om upphovsrätt. Detta förklaras vidare längre ned på sidan.</li>
+                        <br>
+                        <li><strong>Skönlitteratur.</strong> Du ska läsa och arbeta med skönlitteratur, dvs vanliga böcker, från olika författare från olika bakgrunder.</li>
+                        <br>
+                        <li><strong>Berättarteknik och vanliga stildrag</strong> i fiktiva berättelser, såväl böcker som film och teater.</li>
+                        <br>
+                        <li><strong>Grundläggande språkliga begrepp</strong> som behövs för att diskutera och analysera språk och språklig variation i texter och tal.</li>
+                        <br>
+                        <li><strong>Grundläggande kunskap om språklig variation</strong>, i denna kurs fokuserat på hur språket varierar mellan olika kulturer och på olika geografiska platser. Dessutom hur digitaliseringen påverkat språket.</li>
+                      </ol>
+                    </p>
+                  </div>
+                  <!--<span id="dots-1">...</span><span id="read-more-1">-->
+                  <div class="container flex-container">
+                    <div class="card subject-page-card">
+                      <div class="card-body subject-card-body">
+                        <h3 style="margin-bottom: 20px;">Centralt innehåll - exempel</h3>
+                        <p>Nedan förklaras tre av ovanstående nio punkter närmare, och du får ta del av lite modeller och verktyg som kan hjälpa dig att förstå dem.</p>
+                        <h5>Argumentationsteknik</h5>
+                        <p>Att argumentera innebär att uttrycka en åsikt, ofta kallat en <em>tes</em>, med syfte att övertyga läsare eller åhörare.
+                          Det vanligaste sättet att <span id="dots-centralt-innehall">...</span><span id="read-more-cent-inn"> beröra detta i text i Svenska 1 är genom insändare eller debattartiklar. Kunskap om argumentationsteknik
+                          är viktigt genom livet när du i olika sammanhang vill göra din röst hörd eller av någon anledning påverka din omgivning. 
+                          Det vanligaste sättet att introducera argumentation är genom Aristoteles tre argumenttyper, <em>ethos, logos </em>och <em>pathos.</em></span>
+                        </p>
+                        <div id="read-more-cent-inn-2">
+                            <ol>
+                              <li><strong>Ethos: </strong>Hit räknar vi argument som bygger på skribentens eller talarens trovärdighet i sig. Ett typiskt exempel på
+                                ett starkt ethos-argument skulle kunna vara att en debattartikel om  att arbetsförhållanden i industrin måste förbättras är skriven av
+                                någon som själv arbetat i industrin under en längre tid.</li>
+                                <br>
+                              <li><strong>Logos: </strong> Detta handlar om att styrka din åsikt med fakta, och således tillföra <em>logik</em> till din tes.
+                                Använd trovärdiga källor. Exempelvis, i samma debattartikel som ovan skulle tesen "Arbetsförhållanden i industrin är för dåliga"
+                                kunna stärkas ur ett logos-perspektiv med en källhänvisad upplysning om att "84 % av industirarbetarna i region X år YYYY uppgav
+                                att de varit missnöjda med sina arbetsförhållanden".</li>
+                                <br>
+                              <li><strong>Pathos: </strong>Här handlar det om att väcka känslor hos åhöraren. Genom att anspela på människors känslor kan du få dem att bli mer benägna att hålla 
+                                med dig. I återigen samma exempel angående de farliga och dåliga förhållandena i industrin skulle du kunna visa eller berätta om 
+                                en historia där en person förlorat en anhörig i industrin, exempelvis.</li>
+                            </ol>
+                            <p> Försök ha med alla tre i ditt argumenterande, för att de ska stärka varandra och således ge din text eller ditt tal mer tyngd.</p>
+                        
+                          <h5 style="margin-top: 40px;">Retorik</h5>
+                          <p>
+                            I denna kurs sammanfaller retoriken i mångt och mycket med argumentationen, för att sedan specificeras i senare kurser.
+                            Här kan vi dock tillägga hur man ofta säger att disponeringen av argument bör se ut för att uppnå retorisk kvalitét:
+                            <ol>
+                              <li><strong>Tes.</strong> Du inleder med att klargöra vilket budskap du har.</li>
+                              <br>
+                              <li><strong>Argument.</strong> En första anledning till varför det du säger stämmer. <em>Att tänka på:</em> vill du börja med ethos, pathos eller logos?</li>
+                              <br>
+                              <li><strong>Stödargument.</strong> Fyll ut det första argumentet med ett eller ett par andra argument som stödjer tesen. Dessa bör <em>inte</em> vara dina starkaste argument.</li>
+                              <br>
+                              <li><strong>Motargument.</strong> Här tar du upp vad som skulle kunna hållas emot din åsikt. Det är effektivt att själv ta upp detta innan åhöraren ens hinner formulera sitt motargument, och bidrar till att du har ett mer komplett resonemang.</li>
+                              <br>
+                              <li><strong>Besvara motargument.</strong> Det är optimalt att avsluta med att avvisa motargumenten med ett starkt, slagkraftigt och viktigt avslutande argument. Tänk på de tre argumenttyperna i samtliga steg!</li>
+                            </ol>
+                          </p>
+                          <h5 style="margin-top: 40px;">Att bearbeta och kritiskt granska text</h5>
+                          <p>
+                            Här kan vi beröra grundläggande analysstrategi samt lite begrepp kopplat till källhänvisning och analys av källor.
+                            När du läser en text kan du, för att få en överblick, reflektera över följande punkter.
+                            <ol>
+                              <li><strong>Vad handlar texten om?</strong> Träna på att i korthet men med tydlighet återberätta innehållet med egna ord.</li>
+                              <br>
+                              <li><strong>Finns det ett budskap?</strong> Detta kan vara olika beroende på vilken typ a text det är. Analyserar du en argumenterande text ska du bara sammanfatta vad personen vill övertyga om, är det exempelvis en novell kan det vara mer komplext. Tänk efter medan du läser!</li>
+                              <br>
+                              <li><strong>Tema och motiv.</strong> Kanske mest relevant i noveller eller andra berättande texter. Vilket tema har texten? Är den intensiv och full av händelser eller mer tänkande? Vilket motiv har texten? Dvs vilken scen utspelar sig händelsen på och vilka fenomen eller personer är en del av det.</li>
+                              <br>
+                              <li><strong>Dramaturgi.</strong> Vad händer i texten ur ett dramaturgiskt perspektiv? Finns några tydliga vändningar?</li>
+                              <br>
+                              <li><strong>Vem är berättaren?</strong> Hur påverkar det berättelsen att just den personen (om det finns en berättande person) är den som berättar? Hade det blivit annorlunda om någon annan berättat samma sak?</li>
+                            </ol> 
+                            Vidare kan vi titta på några grunder angående källor. Det finns till att börja med olika sätt att göra källhänvisningar, och du kan ombes välja själv eller använda en given modell. En bra sammanfattning finns på läxhjälpen.se, du hittar den <span><a href="https://xn--lxhjlp-buad.nu/guider/kallhanvisning/" target="_blank">här</a></span>
+                            Att lära sig dessa system för källhänvisning ordentligt redan nu i gymnasiet är en viktig nyckel till att kunna skriva effektivt
+                            under fortsatta studier. Utöver dina egna källhänvisningar ska du kunna genomföra analys av källor, och där finns några begrepp som är nyttiga att utgå ifrån.
+                            <ul>
+                              <li><strong>Primärkälla:</strong> Här kommer informationen direkt från personen som upplevde en händelse, eller på något annat sätt är den 
+                              första som bevittnat "händelsen", t.ex forskaren som står bakom ett forskningsresultat. Denna typ av källa minskar risken för vinklingar.</li>
+                              <br>
+                              <li><strong>Sekundärkälla:</strong> När någon återger information den själv inte är grundkällan till. Enkelt exemepl: du återberättar något din kompis berättat. Mer formellt kan det vara en artikel som källhänvisar till en annan artikel. Bra att tänka på: försök hitta primärkällan, då selundärkällan kanske valt ut just de delar som gynnar dennes poäng när den refererar.</li>
+                              <br>
+                              <li><strong>Politiska budskap: </strong>Har källan någon anledning att vilja vinkla saken? Om du läser en artikel av en politiskt beroende person kan det finnas stor risk att denne, som sekundärkälla, valt ut och vinklat information som gynnar denne.</li>
+                              <br>
+                              <li><strong>Reklam: </strong>Finns det något ekonomiskt incitament med att lyfta just denna information? Har t.ex företaget som skriver om en viss sak ekonomiska samarbeten med de som tillhandahåller en vara eller tjänst som lyfts fram i artikeln? </li>
+                              <br>
+                            </ul>
+                          </p>
+                        </div>
+                        <div class="btn btn-outline-dark btn-lg" id="read-more-btn-cent-inn" onclick="readMore('dots-centralt-innehall', 'read-more-cent-inn', 'read-more-cent-inn-2', 'read-more-btn-cent-inn')">Läs vidare</div>
+                        <!--div class="btn btn-outline-dark" id="read-more-btn-1" onclick="readMore('dots-1', 'read-more-1', 'read-more-1b', 'read-more-btn-1')">Läs vidare</div>-->
+
+                      </div> 
+                    </div>
+                    <h2 style="margin-top: 40px; color: black;">Betygskriterier</h2>
+                    <p style="color:black">Att läsa betygskriterier känns för många meningslöst. Formuleringarna är långa, och de enda skillnaderna betygen emellan är
+                      att några fåtal ord i fetstil byts ut. Dessa formuleringar är dock viktiga, pricksäkra och gör viktiga distinktioner
+                      mellan dem. Vill du läsa betygskriterierna i sin helhet, följer du återigen länken till skolverket högst upp på sidan. Vår förhoppning är dock att vi ska kunna
+                      ge dig en mer intuitiv formulering av dessa kriterier och att du, med hjälp av våra exemepel, ska förstå vad du behöver göra för att uppfylla dem.
+                    </p>
+                  </div>
+
+                </div>
+                <!--============================== SVENSKA 2 =====================================-->
+                <div class="tab-pane fade" id="sve-2-view" role="tabpanel" aria-labelledby="menu-sve-1">
+                  <h1 style="color: black;">Svenska 2</h1> 
+                </div>
+                <!--============================== SVENSKA 3 =====================================-->
+                <div class="tab-pane fade" id="sve-3-view" role="tabpanel" aria-labelledby="menu-sve-1">
+                  <h1 style="color: black;">Svenska 3</h1> 
+                </div>
+<!--######################################################################################################################-->
+<!--################################################# ENGELSKA ############################################################-->
+<!--######################################################################################################################-->
+                <div class="tab-pane fade" id="eng-view" role="tabpanel" aria-labelledby="menu-eng">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/book1.jpg);"></div>
+                  </div>
+                  <div class="container flex-container align-items-left">
+                    <h1 style="color:black;">Engelska</h1>
+                    <p style="margin-top: 20px; color:black">Den svenska gymnasieskolan innefattar två obligatoriska och en valbar kurs i engelska.
+                    Här kan du finna länkar vidare till tips och råd för samtliga kurser, samt få tips på hur du utvecklas i engelska i största allmänhet.
+                    Engelskan är idag en förutsättning för att klara av jobbet i många branscher, och det är dessutom viktigt ur ett privat perspektiv!
+                    </p> 
+                  </div>
+                  <div class="container flex-container course-links-container">
+                    <ul class="course-links-list">
+                      <li class="courses-links"><a href="#eng-5-view" data-toggle="list" id="menu-eng-5" role="tab" style="color: white;">Ta mig vidare till Engelska 5</a></li>
+                      <li class="courses-links"><a href="#eng-6-view" data-toggle="list" id="menu-eng-6" role="tab" style="color: white;">Ta mig vidare till Engelska 6</a></li>
+                      <li class="courses-links"><a href="#eng-7-view" data-toggle="list" id="menu-eng-7" role="tab" style="color: white;">Ta mig vidare till Engelska 7</a></li>
+                    </ul> 
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col col-sm-6">
+                      <div class="container flex-container" style="border: black;">
+                        <div class="card subject-page-card">
+                          <div class="card-body subject-card-body">
+                            <h4 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Ämnets beståndsdelar</h4> 
+                            <p>Engelskan är, för nästan alla gymnasieelever i Sverige, inte modersmål utan andra eller tredjespråk. I och med detta
+                              skiljer sig ämnets huvudsakliga beståndsdelar från svenskans. Istället för att utgå ifrån specifika sätt att använda eller 
+                              ta del av språk, som <em>skrivande</em>, <em>talande</em> eller <em>litteratur</em>, delar vi in engelskaundervisningen i följande beståndsdelar:
+                            </p>
+                            <ul>
+                              <li><strong>Kommunikation</strong>, dvs din förmåga att deltaga i olika sammanhang där engelska är det språk som brukas.</li>
+                              <br>
+                              <li><strong>Reception</strong>, dvs din förmåga att förstå talad och skriven engelska.</li> 
+                              <br>
+                              <li><strong>Produktion och interaktion</strong>, dvs din förmåga att själv skriva, tala och utbyta information på engelska.</li>
+                            </ul>
+                            <p>Förenklat kan man säga att det förstnämnda, kommunikation, är huvudmålet som sen innefattar reception, produktion och interaktion.
+                              Genom dessa ska du ges möjligheten att utveckla fyra huvudsakliga färdigheter. Dessa beskrivs i sin helhet på 
+                              <span><a href="https://www.skolverket.se/undervisning/gymnasieskolan/laroplan-program-och-amnen-i-gymnasieskolan/gymnasieprogrammen/amne?url=-996270488%2Fsyllabuscw%2Fjsp%2Fsubject.htm%3FsubjectCode%3DENG%26version%3D6%26tos%3Dgy&sv.url=12.5dfee44715d35a5cdfa92a3" target="_blank">Skolverket.se</a></span>
+                              , men vi har här gjort en enkel tolkning av dem för att hjälpa dig med förståelsen! 
+                            </p> 
+                            <ol>
+                              <li>Du ska förstå engelska i tal och skrift, även i olika sammanhang där olika typ av språk används.</li>
+                              <br>
+                              <li>Du ska själv kunna delta i olika sammanhang genom att formulera dig i tal och skrift.</li>
+                              <br>
+                              <li>Du ska kunna anpassa även ditt engelska språk till olika sammanhang. Dvs, även om det inte är ditt förstaspråk ska du kunna göra skillnad på hur man uttrycker sig i formella sammanhang kontra vardagligt tal, till exempel.</li>
+                              <br>
+                              <li>Du ska kunna använda dina förmågor för att ta del av och förstå kulturer och sociala förhållanden. Med det menas att lyfta vikten av att kunna använda engelska som brygga för att sätta sig in i människor och grupper som skiljer sig från dig och dina erfarenheter.</li>
+                              <br>
+                            </ol>
+                            <p>Vissa elever har svårt att se syftet med att uppnå allt detta. Varför räcker det inte med att kunna fråga sig fram på ett hyfsat sätt som turist i ett annat land?
+                              I fönstret till höger kan du läsa lite om varför vi anser att
+                              det, oavsett framtida yrke, vara duktig på engelska! 
+                            </p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col col-sm-6">
+                      <div class="container flex-container" style="border: black;">
+                        <div class="card subject-page-card">
+                          <div class="card-body subject-card-body">
+                            <h4 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Varför behöver du vara bra på engelska?</h4> 
+                            <p>Tittar vi på fördigheterna som beskrivs i fönstret till vänster så fokuserar de på två saker: du ska kunna det engelska språket, och du ska kunna
+                              använda det för att möta människor som från andra kulturella och geografiska bakgrunder. Detta understryker en viktig skillnad mellan 
+                              ämnet svenska och ämnet engelska. Svenska, som är det språk som en stor majoritet av svenskarna kommer att använda dagligen, fokuserar mer
+                              på djupdykningar i språklig korrekthet, stilistiska drag och förståelse för litteratur såväl som litteraturhistoria. Språkriktighet är
+                              givetvis en viktig del av <em>bedömningen</em> även i engelskan, men man anser att huvudsyftet är att skapa förutsättningar för samverkan 
+                              trots att man har olika modersmål. Utöver lärandemålen finns flera ytterligare anledningar till att lära sig engelska.
+                              <br>
+                              <br> 
+                              <strong>Engelska blir bara vanligare</strong> till vardags för människor i Sverige. Vi kommunicerar i större utsträckning med människor privat
+                              värden över via sociala medier och onlinespel, och allt fler arbetsplatser erbjuds av internationella företag. Det är därför på ett helt annat
+                              sätt begränsande att ha bristfälliga engelskakunskaper idag om du vill vara fri i ditt val av yrke eller fritidsintressen. Alltså, även
+                              gällande engelskan är det viktigt att lära sig anpassa språk efter situation och mottagare. Framförallt gällande det formella språket är skolan
+                              viktig.
+                              <br>
+                              <br>
+                              <strong>Det kommer bara bli viktigare.</strong> Du kan sannolikt förvänta dig att denna trend kommer att fortsätta, och med detta ställs
+                              krav på dina engelskakunskaper för att kunna ha ett berikat liv där du tar del av vad världen har att erbjuda. Det största hindret 
+                              för vänskaper att uppstå och för kulturella utbyten är oförmåga att kommunicera. Att ha ett språk att mötas på, oavsett om det är engelska,
+                              svenska eller kinesika, bidrar till samarbete och utveckling på alla plan internationellt. Sverige är, bland länder som inte har engelska 
+                              som huvudspråk, redan idag långt gångna i processen och vi förknippas med god engelska. Det ger oss förutsättningar att fortsätta bli än bättre! Engelskan är
+                              här för att stanna.
+                              <br>
+                              <br>
+                              <strong>Det är din skyldighet</strong> att bidra till att språk fortsätter vara en stor del av en persons bildandeprocess.
+                              Det kanske känns avlägset idag, men många av er som läser detta kommer sannolikt att bli föräldrar en dag, och 
+                              om du inte har tagit dig tiden att bemästra engelska minskar sannolikheten att dina barn, och i förlängningen framtida
+                              generationer, ser vikten av detsamma. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                <!--============================== ENGELSKA 5 =====================================-->
+                <div class="tab-pane fade" id="eng-5-view" role="tabpanel" aria-labelledby="menu-eng-5">
+                  <h1 style="color: black;">Engelska 5</h1> 
+                </div>
+                <!--============================== ENGELSKA 6 =====================================-->
+                <div class="tab-pane fade" id="eng-6-view" role="tabpanel" aria-labelledby="menu-eng-6">
+                  <h1 style="color: black;">Engelska 6</h1> 
+                </div>
+                <!--============================== ENGELSKA 7 =====================================-->
+                <div class="tab-pane fade" id="eng-7-view" role="tabpanel" aria-labelledby="menu-eng-7">
+                  <h1 style="color: black;">Engelska 7</h1> 
+                </div>
+
+  <!--######################################################################################################################-->
+  <!--################################################# MATEMATIK ############################################################-->
+  <!--######################################################################################################################-->
+                <div class="tab-pane fade" id="math-view" role="tabpanel" aria-labelledby="menu-math">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/math.jpg);"></div>
+                  </div>
+                  <div class="container flex-container align-items-left">
+                    <h1 style="color:black;">Matematik</h1>
+                    <p style="margin-top: 20px; color:black">På vär ämnessida för Matematik finner du all hjälp du behöver för att klara
+                    av ett ämne som, för många, upplevs som svårt. Det är en vanlig missuppfattning att matematik är tråkigt, och därmed vill vi, förutom
+                    inoformation om själva kurserna, ge er lite vägledning för att finna varför matte är roligt. Följ någon av länkarna till kurserna eller
+                    läs vidare om matte i allmänhet!</p>
+                  </div>
+                  <div class="container flex-container course-links-container">
+                    <ul class="course-links-list">
+                      <li class="courses-links"><a href="#math-1-view" data-toggle="list" id="menu-math-1" role="tab" style="color: white;">Ta mig vidare till Matematik 1</a></li>
+                      <li class="courses-links"><a href="#math-2-view" data-toggle="list" id="menu-math-2" role="tab" style="color: white;">Ta mig vidare till Matematik 2</a></li>
+                      <li class="courses-links"><a href="#math-3-view" data-toggle="list" id="menu-math-3" role="tab" style="color: white;">Ta mig vidare till Matematik 3</a></li>
+                      <li class="courses-links"><a href="#math-4-view" data-toggle="list" id="menu-math-4" role="tab" style="color: white;">Ta mig vidare till Matematik 4</a></li>
+                      <li class="courses-links"><a href="#math-5-view" data-toggle="list" id="menu-math-5" role="tab" style="color: white;">Ta mig vidare till Matematik 5</a></li>
+                      <li class="courses-links"><a href="#math-spec-view" data-toggle="list" id="menu-math-spec" role="tab" style="color: white;">Ta mig vidare till Matematik Spec</a></li>
+                    </ul> 
+                  </div>
+                  <div class="container flex-container">
+                    <div class="card subject-page-card">
+                      <div class="card-body subject-card-body">
+                        <h2 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Matematik <strong>ÄR</strong> användbart</h2> 
+                        <p><em>Det här kommer jag aldrig att använda i verkliga livet</em> är en vanligt förekommande fras bland ungdomar som är negativa
+                          i sin inställning till matematik. Faktum är att de, på ett sätt, har helt rätt. Ytterst få av oss kommer att ha ett yrke där
+                          vi till vardags löser ekvationer, härleder matematiska samband, deriverar uttryck för att betrakta en matematisk förändring eller besvarar
+                          en fråga om hur långa sidor en triangel har beroende på vinklarna i hörnen. Kort sagt, få har <em>direkt</em> användning för matematik 
+                          på en nivå ovanför multiplikationstabellerna, men vi har alla <em>indirekt</em> användning för matematiken. Här följer några exempel.
+                          <br>
+                          <br> 
+                          <strong>Matte gör dig smartare på alla plan i livet.</strong> Släpp tanken på att du ska använda exakt den räknemetod eller den
+                          matematiska modell du har på papperet framför dig när du sitter på mattelektion. Tänk istället på vad som händer med dig under tiden som du
+                          försöker dig på att lösa ut ekvationen med de verktyg kursen gått igeom. Det är nämligen så att all matematik i grunden bygger på logik,
+                          och att hela tiden utmana dig själv med komplexare, men precis lika <em>logiska</em> problem tvingar din hjärna att utvecklas.
+                          Man kan jämföra med en dator, där utvecklingen gjort att datorernas hårdvara, alltså hur de faktiskt är byggda, blir alltmer komplex.
+                          En dator kan idag processa enormt mycket mer information, och uträtta enormt mycket mer saker under exempelvis en sekund än den kunde
+                          för 10 år sedan. Vi bygger helt enkelt nya datorer som är bättre, och ersätter de gamla. 
+                          <br> 
+                          Men din hjärna är mer imponerande än så! Den behöver aldrig bytas ut, eftersom den kan utvecklas! När du försöker lösa allt svårare logiska
+                          problem tvingas din hjärna att rent fysiskt utvecklas. Den hittar nya vägar, lär sig processa mer information på kortare tid och
+                          blir således till en uppdaterad version av sig själv. Som en ny dator, fast innanför samma pannben. 
+                          <br>
+                          När du väl utvecklats så är det såklart
+                          inte så att din hjärna bara kan använda detta till att lösa matematiska problem, utan du har helt plötsligt fått tillgång till en bättre 
+                          "dator" som kan hjälpa dig att lösa problem inom helt andra områden. Kort sagt, du har blivit smartare!
+                          <br>
+                          <br>
+                          <strong>Allt fler yrken bygger på logik.</strong> Eftersom alla yrken blir mer komplexa är det gynnsamt att vara logisk och duktig på att
+                          lösa problem oavsett yrke. Ser du de sex förmågorna längre ner på sidan? Vissa av dem kanske tycks rikta sig direkt mot 
+                          att faktiskt räkna matematik, men samtliga är egentligen till för att <em>idag</em> skapa goda förutsättningar för dig att lära dig saker <em>senare.</em>
+
+                          <br>
+                          <br>
+                          <strong>Nästa gång </strong> du är på väg att säga att du just nu gör något som du <strong>aldrig</strong>
+                          kommer att använda i verkliga livet, tänk då efter en sväng. 
+                          <br> 
+                          Kommer du att ställas inför ett problem någon gång i livet?
+                          <br>
+                          Kommer du att ha ett yrke där du ibland tvingas tänka efter innan du gör något?
+                          <br>
+                          Kommer du någon gång att behöva lära dig nya saker?
+                          <br>
+                          Om svaret på ovanstående frågor är ja, vilket vi tror gäller samtliga, så ÄR matematiken någonting du kommer ha användning av.
+
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card subject-page-card" style="margin-top: 30px;">
+                      <div class="card-body subject-card-body">
+                        <h4 class="text-center" style="margin-top: 20px; margin-bottom: 20px; color: black">Ämnets beståndsdelar</h4> 
+                        <p>Matematik är för många ett knepigt ämne. Många hänvisar till att det är svårt, men kanske framförallt <em>tråkigt</em>
+                          när man svarar på varför man inte tycker om eller uppnår goda resultat i matematik. För dig som läser detta kommer vi snabbt att
+                          gå igenom vilka mål skolverket har satt upp med gymnasiell undervisning i matematik, men sen vill vi gärna göra et försök att väcka intresset
+                          för dig som tycker matten känns ångestladdad. Matten är så långt mycket mer användbar än många tror, även om det ibland inte är den enklaste av 
+                          kopplingar att se. 
+                          <br>
+                          Matematiken på gymnasiet ska, genom att utbilda i logik, problemlösning och matematiska angreppssätt, ge förutsättnigar att uppnå följande
+                          sex egenskaper:
+                        </p>
+                        <ol>
+                          <li>Förmågan att använda och beskriva matematiska begrepp, och samband mellan dessa.</li>
+                          <br>
+                          <li>Förmågan att lära dig procedurer och sedan använda dem för att lösa problem av standardkaraktär. Dvs en typ av problem där tillvägagångssätt och lösningsgång sker enligt en procedur, samma steg varje gång. </li>
+                          <br>
+                          <li>Förmågan att analysera och lösa problem med hjälp av matematik.</li>
+                          <br>
+                          <li>Förmågan att tillämpa och använda de matematiska modeller so du lär dig. Alltså, förstå dig på ett problem och inse att de modeller du lärt dig kan hjälpa dig att hitta lösningen.</li>
+                          <br>
+                          <li>Förmågan att föra och följa matematiska resonemang.</li>
+                          <br>
+                          <li>Förmåga att kommunicera matematik, inte bara genom uträkningar utan också i tal och skrift.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--============================== MATEMATIK 1 =====================================-->
+                <div class="tab-pane fade" id="math-1-view" role="tabpanel" aria-labelledby="menu-math-1">
+                  <h1 style="color: black;">Matte 1</h1> 
+                </div>
+
+                <!--============================== MATEMATIK 2 =====================================-->
+                <div class="tab-pane fade" id="math-2-view" role="tabpanel" aria-labelledby="menu-math-2">
+                  <h1 style="color: black;">Matte 2</h1> 
+                </div>
+                <!--============================== MATEMATIK 3 =====================================-->
+                <div class="tab-pane fade" id="math-3-view" role="tabpanel" aria-labelledby="menu-math-3">
+                  <h1 style="color: black;">Matte 3</h1> 
+                </div>
+                <!--============================== MATEMATIK 4 =====================================-->
+                <div class="tab-pane fade" id="math-4-view" role="tabpanel" aria-labelledby="menu-math-4">
+                  <h1 style="color: black;">Matte 4</h1> 
+                </div>
+                <!--============================== MATEMATIK 5 =====================================-->
+                <div class="tab-pane fade" id="math-5-view" role="tabpanel" aria-labelledby="menu-math-5">
+                  <h1 style="color: black;">Matte 5</h1> 
+                </div>
+                <!--============================== MATEMATIK SPEC =====================================-->
+                <div class="tab-pane fade" id="math-spec-view" role="tabpanel" aria-labelledby="menu-math-spec">
+                  <h1 style="color: black;">Matte spec</h1> 
+                </div>
+<!--######################################################################################################################-->
+<!--################################################# NATURVETENSKAPLIGT ############################################################-->
+<!--######################################################################################################################-->
+                <div class="tab-pane fade" id="nat-view" role="tabpanel" aria-labelledby="menu-nat">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/natur.jpg);"></div>
+                  </div>
+                  <div class="container flex-container align-items-left">
+                    <h1 style="color:black;">Naturvetenskapliga ämnen</h1>
+                    <p style="margin-top: 20px; color:black">På vär ämnessida för Matematik finner du all hjälp du behöver för att klara
+                    av ett ämne som, för många, upplevs som svårt. Det är en vanlig missuppfattning att matematik är tråkigt, och därmed vill vi, förutom
+                    inoformation om själva kurserna, ge er lite vägledning för att finna varför matte är roligt. Följ någon av länkarna till kurserna eller
+                    läs vidare om matte i allmänhet!</p>
+                  </div>
+                  <div class="container flex-container course-links-container">
+                    <ul class="course-links-list">
+                      <li class="courses-links"><a href="#kemi-1-view" data-toggle="list" id="menu-kemi-1" role="tab" style="color: white;">Ta mig vidare till Kemi 1</a></li>
+                      <li class="courses-links"><a href="#kemi-1-view" data-toggle="list" id="menu-kemi-2" role="tab" style="color: white;">Ta mig vidare till Kemi 2</a></li>
+                      <li class="courses-links"><a href="#fysik-1-view" data-toggle="list" id="menu-fysik-1" role="tab" style="color: white;">Ta mig vidare till Fysik 1</a></li>
+                      <li class="courses-links"><a href="#fysik-2-view" data-toggle="list" id="menu-fysik-2" role="tab" style="color: white;">Ta mig vidare till Fysik 2</a></li>
+                      <li class="courses-links"><a href="#fysik-3-view" data-toggle="list" id="menu-fysik-3" role="tab" style="color: white;">Ta mig vidare till Fysik 3</a></li>
+                      <li class="courses-links"><a href="#biologi-1-view" data-toggle="list" id="menu-biologi-1" role="tab" style="color: white;">Ta mig vidare till Biologi 1</a></li>
+                      <li class="courses-links"><a href="#biologi-2-view" data-toggle="list" id="menu-biologi-2" role="tab" style="color: white;">Ta mig vidare till Biologi 2</a></li>
+                      <li class="courses-links"><a href="#naturkunskap-1-view" data-toggle="list" id="menu-nat-1" role="tab" style="color: white;">Ta mig vidare till Naturkunskap 1</a></li>
+                    </ul> 
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                          <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div>
+                    </div>
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                        <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div>
+                    </div>
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                        <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <!--============================== KEMI 1 =====================================-->
+                <div class="tab-pane fade" id="kemi-1-view" role="tabpanel" aria-labelledby="menu-kemi-1">
+                  <h1 style="color: black;">Kemi 1</h1> 
+                </div>
+
+                <!--============================== KEMI 2 =====================================-->
+                <div class="tab-pane fade" id="kemi-2-view" role="tabpanel" aria-labelledby="menu-kemi-2">
+                  <h1 style="color: black;">Kemi 2</h1> 
+                </div>
+                <!--============================== FYSIK 1 =====================================-->
+                <div class="tab-pane fade" id="fysik-1-view" role="tabpanel" aria-labelledby="menu-fysik-1">
+                  <h1 style="color: black;">Fysik 1</h1> 
+                </div>
+                <!--============================== FYSIK 2 =====================================-->
+                <div class="tab-pane fade" id="fysik-2-view" role="tabpanel" aria-labelledby="menu-fysik-2">
+                  <h1 style="color: black;">Fysik 2</h1> 
+                </div>
+                <!--============================== FYSIK 3 =====================================-->
+                <div class="tab-pane fade" id="fysik-3-view" role="tabpanel" aria-labelledby="menu-fysik-3">
+                  <h1 style="color: black;">Fysik 3</h1> 
+                </div>
+                <!--============================== BIOLOGI 1 =====================================-->
+                <div class="tab-pane fade" id="biologi-1-view" role="tabpanel" aria-labelledby="menu-biologi-1">
+                  <h1 style="color: black;">Biologi 1</h1> 
+                </div>
+                <!--============================== BIOLOGI 2 =====================================-->
+                <div class="tab-pane fade" id="biologi-2-view" role="tabpanel" aria-labelledby="menu-biologi-2">
+                  <h1 style="color: black;">Biologi 2</h1> 
+                </div>
+                <!--============================== NATURKUNSKAP 1 =====================================-->
+                <div class="tab-pane fade" id="naturkunskap-1-view" role="tabpanel" aria-labelledby="menu-naturkunskap-1">
+                  <h1 style="color: black;">Naturkunskap 1 </h1> 
+                </div> 
+                
+                <!--######################################################################################################################-->
+                <!--################################################# SAMMHÄLLSORIENTERAT ############################################################-->
+                <!--######################################################################################################################-->
+                <div class="tab-pane fade" id="sam-view" role="tabpanel" aria-labelledby="menu-sam">
+                  <div class="container plan-image-top">
+                    <div class="overlay-image-2" style="background-image: url(/images/sam.jpg);"></div>
+                  </div>
+                  <div class="container flex-container align-items-left">
+                    <h1 style="color:black;">Samhällsorienterade ämnen</h1>
+                    <p style="margin-top: 20px; color:black">På vär ämnessida för Matematik finner du all hjälp du behöver för att klara
+                    av ett ämne som, för många, upplevs som svårt. Det är en vanlig missuppfattning att matematik är tråkigt, och därmed vill vi, förutom
+                    inoformation om själva kurserna, ge er lite vägledning för att finna varför matte är roligt. Följ någon av länkarna till kurserna eller
+                    läs vidare om matte i allmänhet!</p>
+                  </div>
+                  <div class="container flex-container course-links-container">
+                    <ul class="course-links-list"> 
+                      <li class="courses-links"><a href="#sam-1-view" data-toggle="list" id="menu-sam-1" role="tab" style="color: white;">Ta mig vidare till Samhällskunskap 1</a></li>
+                      <li class="courses-links"><a href="#sam-2-view" data-toggle="list" id="menu-sam-2" role="tab" style="color: white;">Ta mig vidare till Samhällskunskap 2</a></li>
+                      <li class="courses-links"><a href="#sam-3-view" data-toggle="list" id="menu-sam-3" role="tab" style="color: white;">Ta mig vidare till Samhällskunskap 3</a></li>
+                      <li class="courses-links"><a href="#his-1-view" data-toggle="list" id="menu-his-1" role="tab" style="color: white;">Ta mig vidare till Historia 1</a></li>
+                      <li class="courses-links"><a href="#his-2-view" data-toggle="list" id="menu-his-2" role="tab" style="color: white;">Ta mig vidare till Historia 2</a></li>
+                      <li class="courses-links"><a href="#rel-1-view" data-toggle="list" id="menu-rel-1" role="tab" style="color: white;">Ta mig vidare till Religionskunskap 1</a></li>
+                      <li class="courses-links"><a href="#rel-1-view" data-toggle="list" id="menu-rel-2" role="tab" style="color: white;">Ta mig vidare till Religionskunskap 2</a></li>
+                      <li class="courses-links"><a href="#geo-1-view" data-toggle="list" id="menu-geo-1" role="tab" style="color: white;">Ta mig vidare till Geografi 1</a></li>
+                    </ul> 
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                          <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div>
+                    </div>
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                        <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div>
+                    </div>
+                    <div class="col col-sm-4">
+                      <div class="container flex-container" style="border: black;">
+                        <h3 style="color:black">Här kan det stå lite grejer</h3>
+                      </div> 
+                    </div>
+                  </div>
+
+                </div>
+                <!--============================== SAM 1 =====================================-->
+                <div class="tab-pane fade" id="sam-1-view" role="tabpanel" aria-labelledby="menu-sam-1">
+                  <h1 style="color: black;">Sam 1</h1> 
+                </div>
+
+                <!--============================== SAM 2 =====================================-->
+                <div class="tab-pane fade" id="sam-2-view" role="tabpanel" aria-labelledby="menu-sam-2">
+                  <h1 style="color: black;">Sam 2</h1> 
+                </div>
+                <!--============================== SAM 3 =====================================-->
+                <div class="tab-pane fade" id="sam-3-view" role="tabpanel" aria-labelledby="menu-sam-3">
+                  <h1 style="color: black;">Sam 3</h1> 
+                </div>
+                <!--============================== HISTORIA 1 =====================================-->
+                <div class="tab-pane fade" id="his-1-view" role="tabpanel" aria-labelledby="menu-his-1">
+                  <h1 style="color: black;">Historia 1</h1>   
+                </div>
+                <!--============================== HISTORIA 2 =====================================-->
+                <div class="tab-pane fade" id="his-2-view" role="tabpanel" aria-labelledby="menu-his-2">
+                  <h1 style="color: black;">Historia 2</h1> 
+                </div>
+                <!--============================== RELIGON 1 =====================================-->
+                <div class="tab-pane fade" id="rel-1-view" role="tabpanel" aria-labelledby="menu-rel-1">
+                  <h1 style="color: black;">Religon 1</h1> 
+                </div>
+                <!--============================== RELIGON 2 =====================================-->
+                <div class="tab-pane fade" id="rel-2-view" role="tabpanel" aria-labelledby="menu-rel-2">
+                  <h1 style="color: black;">Religon 2</h1> 
+                </div>
+                <!--============================== GEOGRAFI 1 =====================================-->
+                <div class="tab-pane fade" id="geo-1-view" role="tabpanel" aria-labelledby="menu-geo-1">
+                  <h1 style="color: black;">Geografi 1 </h1>  
+                </div> 
+              </div>
+
+            </div>
+          </div>
+        </script>
+     <!--======================== MODAL SOM KOMMER NÄR MAN KLICKAR HEM OCH INTE ÄR INLOGGAD======================-->   
+        <div class="modal" id="login-to-show-home" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header"> 
+                <h5 class="modal-title">Logga in för att se din hem-sida!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">På din personliga hem-sida kan du spara dina framsteg och hålla koll på dina studier.
+                För att få tillgång till den, logga in eller skapa ett konto via "logga in" högst upp till höger på sidan! 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-outline-light" data-dismiss="modal">Ok</button> 
+              </div> 
+            </div>
+          </div>
+        </div>
+
+
+        <!--================= Contact-view =========================-->
+
+        <script id="view_contact" type="text/html">
+          <div id="contact-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#contact-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#contact-carousel" data-slide-to="1"></li> 
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="overlay-image" style="background-image: url(/images/oldphone.jpg);"></div> 
+                <div class="container startcar-cont">
+                  <h1 class="main-h1">Att få hjälp ska vara enkelt</h1>
+                  <p>Om vi för närvarande saknar någonting du behöver, så vill vi gärna att du hör av dig. Vi vill undvika krångel, telefonköer, 
+                    väntetider och ovisshet. Fyll i det formulär som passar dina önskemål. Du får ett autosvar när vi tagot emot din feedback, samt ett
+                    personligt svar från någon av våra handläggare så fort vi behandlat ditt ärende. Därefter korrigerar vi webbisidan för att erbjuda dig den 
+                    hjälp du vill ha. Det är vad vi kallar studiehjälp 2022!
+                  </p> 
+                </div>
+                
+              </div>
+              <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(/images/ideas.jpg);"></div> 
+                <div class="container startcar-cont">
+                  <h1>Kurser eller allmän information?</h1> 
+                  <p>Nedan finner du två olika formulär. Detta eftersom vi kategoriserar ärenden i "önskemål om ny kurs" och "övriga ärenden". 
+                    Finner du att vi saknar en kurs din skola erbjuder använder du det förstnämnda. Där kan du förvänta dig att kursen blir tillgänglig 
+                    i studieplaneraren snarast. Ibland kan det ta våra handläggare lite längre tid att tillhandahålla specifik information om kursen, men 
+                    du kan vara säker på att vi jobbar med det. Har du något annat önskemål, välkommen att fylla i det andra formuläret. Här 
+                    uppmanar vi till att tipsa om allt mellan himmel och jord! Det kan handla om vad vi har för information på hemsidan såväl som 
+                    förslag på helt nya funktioner och hjälpmedel. 
+                  </p> 
+                </div> 
+                
+              </div>
+            </div>
+            <a href="#contact-carousel" class="carousel-control-prev" role="button" data-slide="prev">
+              <span class="sr-only">Previous</span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </a>
+            <a href="#contact-carousel" class="carousel-control-next" role="button" data-slide="next">
+              <span class="sr-only">Next</span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </a> 
+          </div>
+          <div class="row flex-row" style="margin-bottom: 20rem;">
+            <div class="col col-sm-6">
+              <div class="container flex-container contact-form-container">
+                <div class="card contact-form-card">
+                  <div class="card-body">
+                    <h2 class="text-center" style="margin-top: 20px; margin-bottom: 20px;">Önskemål om ny kurs</h2> 
+                    <p>Fyll i för att vi ska kunna hjälpa dig med alla de kurser du läser. Vi efterfrågar här namnet på din gymnasieskola, samt
+                      kommunen du studerar i. Detta för att vi i vissa fall kan komma att kontakta skolan för mer information kring kursen. I sådant fall
+                      förblir du som användare anonym.
+                    </p>
+                    <form class="contact-form">
+                      <div class="form-outline" >
+                        <input type="text" id="inputCourseSuggestTitle" class="form-control form-control-lg"/>
+                        <label class="form-label" for="inputCourseSuggestTitle">Kurstitel</label>
+                      </div>
+                      <div class="form-outline" >
+                        <label class="contact-label" for="inputCourseSuggestPoints">Kursens poängvärde</label>
+                        <select id="inputCourseSuggestPoints" aria-describedby="course-points-explained">
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                          <option value="150">150</option>
+                        </select>
+                        <small id="course-points-explained" class="form-text" style="color: white;">Poängen är ett mått på hur omfattande en kurs är. Är du osäker, hör med din skola!</small>
+                      </div>
+                      <div class="form-outline" >
+                        <input type="text" id="inputCourseSuggestKommun" class="form-control form-control-lg"/>
+                        <label class="form-label" for="inputCourseSuggestKommun">Kommun</label>
+                      </div>
+                      <div class="form-outline" >
+                        <input type="text" id="inputCourseSuggestSchool" class="form-control form-control-lg"/>
+                        <label class="form-label" for="inputCourseSuggestSchool">Skola</label>
+                      </div>
+
+                    </form>
+                    <div class="d-flex justify-content-center">
+                      <div class="btn btn-lg btn-outline-light" onclick="sendCourseRequest()" style="margin-bottom: 44px;">Skicka</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-6">
+              <div class="container flex-container contact-form-container">
+                <div class="card contact-form-card">
+                  <div class="card-body">
+                    <h2 class="text-center" style="margin-top: 20px; margin-bottom: 20px;">Övrig Feedback</h2> 
+                    <p>Tipsa oss med vad som helst som kan göra upplevelsen bättre! Var inte rädd för att ta i och tipsa om nya funktioner etc,
+                      våra utvecklare vill hjälpa dig!
+                    </p>
+                    <form class="contact-form">
+                      <div class="form-outline" >
+                        <label class="contact-label" for="inputOtherSuggestCategory">Vilken kategori beskriver ditt ärende bäst?</label>
+                        <select id="inputOtherSuggestCategory" aria-describedby="categorys-explained">
+                          <option value="function">Jag saknar en eller flera funktioner på hemsidan</option>
+                          <option value="info">Jag saknar viss information på hemsidan</option>
+                          <option value="visuals">Jag har problem med sidans grafiska utformning</option>
+                        </select>
+                        <small id="categorys-explained" class="form-text" style="color: white;">Om ditt ärende inte stämmer helt med någon kategori, välj någon ändå! Detta är för att vi effektivare ska kunna åtgärda problemet.</small>
+                      </div>
+                      <div class="form-outline">
+                        <label class="form-label" for="inputOtherSuggest">Beskriv ditt ärende på max 500 tecken</label>
+                        <textarea name="contactFreeText" id="inputOtherSuggest" cols="60" rows="10" onkeyup="charCounter(this, 500)"></textarea> 
+                        <div id="character-counter">
+                          <span id="currentCharAmount">0</span>
+                          <span id="maximumCharAmount">/ 500</span>
+                        </div>
+                      </div>                   
+                      
+                    </form>
+
+                    <div class="d-flex justify-content-center"> 
+                      <div class="btn btn-lg btn-outline-light" onclick="sendOtherRequest()">Skicka</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal" id="logged-in-received-confirmation" tabindex="-1" role="dialog" aria-labelledby="received-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header"> 
+                  <h5 class="modal-title">Tack för din feedback!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">Vi har tagit emot dina tips och handlägger ärendet så snart som möjligt. Du kommer att få ett meddelande när vi bestämt hur åtgärden kommer att bli.</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-outline-light" data-dismiss="modal">Ok</button> 
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div class="modal" id="not-received-confirmation" tabindex="-1" role="dialog" aria-labelledby="not-received-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Du måste logga in för att skicka in ditt ärende</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    
+                  </button>
+                </div>
+                <div class="modal-body">För att underlätta återkoppling och eventuella ärendefrågor måste du skapa ett konto för att skicka dina tips till oss. Det är gratis och tar bara en minut!</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-outline-light" data-dismiss="modal">OK</button> 
+                </div> 
+              </div>
+            </div>
+          </div>
+
+
+        </script>
+          
+        <!--================= Account-view =========================-->
+
+        <script id="view_account" type="text/html">
+          <div class="container-fluid flex-container" style="margin-bottom: 20rem;">
+            <div class="row flex-nowrap">
+              <div class="col-sm-4" id="left-profile">
+                <div class="row inner-row">
+                  <div class="card profile-card">
+                    <div class="card-body">
+                      <h1>Min profil</h1>
+                      <div class="container" id="profile-card-cont">
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <img class="card-img-top" id="profilepic" src="/images/axel.jpeg">
+                          </div>
+                          <div class="col-sm-7">
+                            <p id="profile-name"></p>
+                            <p id="profile-program"></p>
+                            <p id="profile-grade"></p>
+                            <p id="profile-avg"></p>
+                          </div>
+                          <div class="btn btn-lg btn-outline-dark" onclick="logOut()">
+                            Logga Ut
+                          </div>
+                          
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row inner-row">
+                    <div class="card profile-card" style="margin-top: 40px;">
+                      <img src="/images/planera.jpg" class="card-img-top" alt="">
+
+                      <div class="card-body">
+                        <h5>Kom in på din drömutbildning</h5>
+                        <p>Använd vår studieplanerare för att se hur du behöver prestera under dina kvarvarande gymnasiekurser för
+                          att nå just den utbildning du vill. Med hjälp av dina studieresultat hittills, kurstitlarna du avser läsa i 
+                          fortsättningen och önskad högskoleutbildning ger vi dig ett förslag, som du sedan kan använda våra kursrum till
+                          hjälp för att uppnå. 
+                        </p>
+                        <div class="btn btn-outline-dark btn-lg" onclick="showPlanView()">
+                          Till studieplaneraren
+                        </div> 
+
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container" id="mand-card-cont">
+                  <div class="card profile-card">
+                    <div class="card-body">
+                      <h5>Dina obligatoriska kurser</h5>
+                        <table class="table table-striped" id="mandcou-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Kurstitel</th>
+                              <th scope="col">Poäng</th>
+                              <th scope="col">Betyg</th>
+                            </tr>
+                          </thead>
+                          <tbody id="man-cou-table-data">  
+                          </tbody>
+
+                        </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container">
+                  <div class="card profile-card">
+                    <div class="card-body">
+                      <h5>Dina avklarade kurser</h5>
+                      <table class="table table-striped" id="finishedcou-table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Kurstitel</th>
+                            <th scope="col">Poäng</th>
+                            <th scope="col">Betyg</th>
+                          </tr>
+                        </thead>
+                        <tbody id="finishedcou-table-data">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <h1>Eftersom du är inloggad får du se detta!</h1>
+          <div class="btn btn-lg btn-outline" onclick="logOut()"> -->
+            <!-- Logga ut -->
+          </div>
+        </script>
+
+
+        <!--================= Planera-view =========================-->
+
+        <script id="view_plan" type="text/html">
+          <!-- <div class="container-fluid"> -->
+            <div class="row flex-nowrap" id="plan-row-custom">
+              <div class="col-sm-2 left-menu-custom">
+                <div class="d-flex flex-column align-items-center" id="sidemenu-plan">
+                    <h2 style="margin-top:20px;">Meny</h2>
+                    <div class="list-group planview-opt-list">
+                      <a class="list-group-item list-group-item-action active mylist-items" id="list-snittbetyg" data-toggle="list" href="#average-calculator" role="tab" aria-controls="beräkna snittbetyg">Beräkna snittbetyg</a>
+                      <a class="list-group-item list-group-item-action mylist-items" id="list-betygsplan" data-toggle="list" href="#gradeplan-maker" role="tab" aria-controls="betygsförslag">Betygsförslag</a>
+                      <a class="list-group-item list-group-item-action mylist-items" id="list-uni-tips" data-toggle="list" href="#uni-student-tips" role="tab" aria-controls="tips från universitetet">Tips från Universitetet</a>
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-10 col-plan-content">
+                <div class="tab-content" id="planview-tabcontent" style="margin-bottom: 20rem;"> 
+                  <div class="tab-pane fade show active" id="average-calculator" role="tabpanel" aria-labelledby="list-snittbetyg">
+                    <div class="container plan-image-top">
+                      <div class="overlay-image-2" style="background-image: url(/images/calculate.jpg);"></div>
+                    </div>
+                    <div class="container flex-container">
+                      <h2 style="color:black;">Betygskollen</h2>
+                      <p style="margin-top: 20px; color:black">Här kan du enkelt testa olika betygskombinationer på dina kurser och se vad det ger 
+                      för snitt. Du som har ett konto hos oss kan också spara ditt nuvarande resultat på din profil för att hålla koll på
+                      din utveckling samt för att använda resultaten i andra funktioner, exempelvis vår resultatplanerare. Fyll i formuläret 
+                      nedan och räkna ut ditt snitt!</p>
+                    </div>
+                    <div class="container avcalc-container-outer" style="padding: 20px;">
+                      <h1>Snittberäknaren</h1> 
+                      <form class="avcalc-form" id="avcalc-form">
+                        <div class="form-outline">
+                          <label class="form-label" for="inputC1">Kurstitel:</label>
+                          <select id="inputC1">
+                            <option value="Svenska 1">Svenska 1</option>
+                            <option value="Svenska 2">Svenska 2</option>
+                            <option value="Svenska 3">Svenska 3</option>
+                            <option value="Engelska 5">Engelska 5</option>
+                            <option value="Engelska 6">Engelska 6</option>
+                            <option value="Engelska 7">Engelska 7</option>
+                            <option value="Matematik 1c">Matematik 1c</option>
+                            <option value="Matematik 2c">Matematik 2c</option> 
+                            <option value="Matematik 3c">Matematik 3c</option> 
+                            <option value="Matematik 4">Matematik 4</option> 
+                            <option value="Matematik 5">Matematik 5</option> 
+                            <option value="Historia 1">Historia 1</option> 
+                            <option value="Religionskunskap 1">Religionskunskap 1</option> 
+                            <option value="Samhällskunkap 1">Samhällskunskap 1</option> 
+                            <option value="Geografi 1">Geografi 1</option> 
+                            <option value="Samhällskunkap 2">Samhällskunskap 2</option> 
+                            <option value="Historia 2">Historia 2</option>
+                            <option value="Biologi 1"> Biologi 1</option> 
+                            <option value="Biologi 2">Biologi 2</option> 
+                            <option value="Kemi 1">Kemi 1</option> 
+                            <option value="Kemi 2">Kemi 2</option> 
+                            <option value="Fysik 1">Fysik 1</option> 
+                            <option value="Fysik 2">Fysik 2</option> 
+                            <option value="Finansiella beräkningar">Finansiella beräkningar</option> 
+                            <option value="Idrott och Hälsa 1">Idrott och Hälsa 1</option> 
+                            <option value="Matematik 1b">Matematik 1b</option> 
+                            <option value="Matematik 2b">Matematik 2b</option> 
+                            <option value="Matematik 3b">Matematik 3b</option> 
+                            <option value="Moderna språk 1">Moderna språk 1</option>  
+                            <option value="Idrott och Hälsa 2">Idrott och Hälsa 2</option>
+                            <option value="Teknik 1">Teknik 1</option> 
+                            <option value="Konstruktion 1">Konstruktion 1</option> 
+                            <option value="Teknik 2">Teknik 2</option> 
+                            <option value="Programmering 1">Programmering 1</option> 
+                            <option value="Naturkunskap 1">Naturkunskap 1</option> 
+                            <option value="Företagsekonomi 1">Företagsekonomi 1</option> 
+                            <option value="Privatjuridik">Privatjuridik</option> 
+                            <option value="Moderna språk 2">Moderna språk 2</option> 
+                            <option value="Psykologi 1">Psykologi 1</option> 
+                            <option value="Företagsekonomi 2">Företagsekonomi 2</option> 
+                            <option value="Entreprenörskap och Företagande">Entreprenörskap och Företagande</option> 
+                            <option value="Internationell ekonomi">Internationell ekonomi</option> 
+                            <option value="Filosofi 1">Filosofi 1</option> 
+                            <option value="Samhällskunskap 3">Samhällskunskap 3</option> 
+                            <option value="Religionskunskap 2">Religionskunskap 2</option> 
+                            <option value="Politik och Hållbar utveckling">Politik och Hållbar utveckling</option> 
+                            <option value="Etnicitet och Kulturmöten">Etnicitet och Kulturmöten</option> 
+                            <option value="Ledarskap och Organisation">Ledarskap och Organisation</option> 
+                            <option value="Företagsekonomi Specialisering">Företagsekonomi Specialisering</option> 
+                            <option value="Fysik 3">Fysik 3</option> 
+                            <option value="Matematik Specialisering">Matematik Specialisering</option> 
+                            <option value="Teknik Specialisering">Teknik Specialisering</option> 
+                            <option value="Gymnasiearbete">Gymnasiearbete</option>  
+                          </select>
+                          <label class="form-label"for="inputB1">Betyg:</label>
+                          <select id="inputB1">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option> 
+                          </select>
+                        </div>
+                        <div class="newcourse-button-div" id="newcourse-button-div1">
+                          <div class="btn btn-md btn-outline-light" id="newcourse-button1" onclick="addNewCourse()">
+                            Lägg till kurs 
+                          </div>
+                        </div>
+                      </form>
+                      <div class="form-outline" style="margin-top: 30px;">
+                        <label class="form-label" for="merit-input">Meritpoäng: </label>
+                        <select id="merit-input">
+                          <option value="0">0</option>
+                          <option value="0.5">0.5</option>
+                          <option value="1.0">1.0</option>
+                          <option value="1.5">1.5</option>
+                          <option value="2.0">2.0</option>
+                          <option value="2.5">2.5</option>
+                        </select> 
+                      </div>
+                      <div class="pt-3"> 
+                        <div class="btn btn-md btn-outline-light" id="calcav-button" style="margin-bottom: 10px; background-color: #6fb5ff;" onclick="calcAverage()">
+                          Beräkna snittbetyg
+                        </div>
+                      </div>
+                      <div id="av-result"> 
+
+                      </div>  
+                        <!-- Modal -->
+                      <div class="modal" id="confirm-grade-save" tabindex="-1" role="dialog" aria-labelledby="confirmsave-modal" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Är du säker?</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                De betyg du fyllt i kommer att sparas på din profil. Du kan självklart spara nya resultat hur många gånger du vill, men eventuella nuvarande resultat kommer att skrivas över.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
+                              <button type="button" class="btn btn-primary btn-outline-light" onclick="cleanFinished()" data-dismiss="modal" data-toggle="modal" data-target="#ok-grade-save">Spara</button> 
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                                    <!-- Modal 2 -->
+                      <div class="modal" id="ok-grade-save" tabindex="-1" role="dialog" aria-labelledby="oksave-modal" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Sparandet lyckades!</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Resultaten har sparats på din profil.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary btn-outline-light" onclick="saveGradesAndAverage()" data-dismiss="modal">OK</button> 
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!--##########################################################################-->
+                  <!--################### ANDRA DELEN, Resultatplaneraren ######################-->
+                   <!--##########################################################################-->
+                  <div class="tab-pane fade" id="gradeplan-maker" role="tabpanel" aria-labelledby="list-betygsplan">
+                    <div class="container plan-image-top">
+                      <div class="overlay-image-2" style="background-image: url(/images/planera.jpg);"></div>
+                    </div>
+                    <div class="container flex-container">
+                      <h2 style="color:black;">Vi hjälper dig att sätta upp studiemål</h2>
+                      <p style="margin-top: 20px; color:black">Med avstamp i dina nuvarande studieresultat, eller med start
+                      from scratch om du ännu inte sparat några sådana, ger vi dig en överblick i hur du behöver prestera resultatmässigt 
+                      för att uppnå ett visst snittbetyg. Till vänster ser du allmän information om vad som krävs för en gymnasieexamen.
+                      Dessa är viktiga att ha koll på när du fyller i själva formuläret, men programmet kommer att berätta för dig om du inte
+                      uppfyller kraven. Du finner även en länk till Antagning.se där du kan se vilken intagningspoäng din drömutbildning har. Till höger ser du själva formuläret, vilket du behöver registrera ett konto hos oss för att använda. Därefter
+                      laddas ditt gymnasieprograms obligatoriska kurser upp automatiskt, detta för att du inte ska missa någon av dem. Fyll sedan på
+                      med de kurser du avser läsa som individuella val och programfördjupning för att uppnå kraven för examen. Fyll i önskat betygssnitt,
+                      så ger vi dig ett förslag på resultat som möter de kraven.</p>
+                    </div>
+                    <div class="container flex-container">
+                      <div class="row flex-nowrap">
+                        <div class="col col-sm-5">
+                          <div class="card plan-results-card">
+                            <h2>Krav för examen</h2>
+                            <div class="card-body ">
+                              <p>Vi kommer att förutsätta att du kommer att läsa alla dina 
+                                obligatoriska, programspecifika kurser, och utöver dessa får du själv ange vilka du kommer att läsa för att uppfylla
+                                kraven för gymnasieexamen. dessa krav är:
+                                <br>
+                                <ul class="krav-examen">
+                                  <li class="krav-examen-punkter"><strong>2250 poäng godkända</strong></li>
+                                  <li class="krav-examen-punkter"><strong>Godkänt i Svenska 1, 2 och 3</strong></li>
+                                  <li class="krav-examen-punkter"><strong>Godkänt i engelska 5 och 6</strong></li>
+                                  <li class="krav-examen-punkter"><strong>Godkänt i Matematik 1</strong></li>
+                                  <li class="krav-examen-punkter"><strong>Godkänt gymnasiearbete</strong></li>
+                                </ul>
+                              </p>
+                              <p>Observera att du kommer att behöva ange alla 2500 poäng för fullständig utbildning
+                                även om examenskravet bara är 2250. Har du inte koll på din drömutbildning? följ länken nedan till antagning.se.
+                                Kom ihåg att antagningspoäng kan variera, så kolla gärna några år bakåt i tiden.
+                              </p>
+                              <a href="https://www.antagning.se/se/start" style="color: white;" target="_blank">Till antagning.se</a>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="col col-sm-7" id="courses-gradeplan-column">
+                          <div class="container flex-container" id="courses-to-read-outer">
+                            <h1>Kurstitlar</h1>
+                            <div class="container flex-container" id="courses-to-read-inner">
+                              <p>Tryck på knappen nedan för att hämta dina obligatoriska kurser du inte läst ännu.
+                              </p>
+                              <div class="btn btn lg btn-outline-light" id="load-mandatory-btn" onclick="loadRemainingMand()">Ladda kurser</div> 
+                            </div>
+                            <div class="container flex-container" id="courses-to-read-bottom">
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--##########################################################################-->
+                  <!--################### TREDJE DELEN, UNiversitetstips ######################-->
+                   <!--##########################################################################-->
+                  <div class="tab-pane fade" id="uni-student-tips" role="tabpanel" aria-labelledby="list-uni-tips">
+                    <div class="container plan-image-top">
+                      <div class="overlay-image-2" style="background-image: url(/images/studenthuset.jpg);"></div>
+                    </div>
+                    <div class="container flex-container">
+                      <h2 style="color:black;">Universitetet - frågor och svar</h2>
+                      <p style="margin-top: 20px; color:black">Du som gymnasieelev får ofta en del vägledande information som din gymnasieskola tillhandahåller.
+                      Hur man söker, vart man söker och vad man kan söka för utbildningar på högskola och universitet får de flesta förklarat för sig via
+                      studievägledare eller motsvarande. Däremot upplever vi att många insikter når studenter först när de väl flyttat och studerat en tid.
+                      Av den anledningen har vi här samlat svar på vanliga frågor, samt tips som inte framgår av den information gymnasieskolan
+                      tillhandahåller, med hjälp av faktiska studenter.</p>
+                    </div>
+                    <!--######################################################################-->
+                    <!--############################ Student 1 ###############################-->
+                    <!--######################################################################-->
+                    <div class="container flex-container example-student-cont">
+                      <div class="row flex-nowrap" style="padding:30px;">
+                        <div class="col col-sm-3">
+                          <div class="card student-advice-picture">
+                            <img src="/images/student3.jpg" style="border-radius:25%;">
+                          </div>
+                        </div>
+                        <div class="col col-sm-9">
+                          <div class="card text-student-card">
+                            <h2 style="color: black;">Våga testa på!</h2>
+                            <p style="color: black;"><strong>Ida är 24 år gammal och studerar affärsjuridik vid Linköpings universitet, och hjälper oss genom att svara på lite frågor 
+                              samt dela med sig av personliga erfarenheter.</strong>
+                            </p>
+                            <ul>
+                              <li><h5><strong style="color: black;">Om du fick ge ett råd till gymnasieelever som funderar över utbildning, vad skulle
+                                det vara?</strong></h5>
+                              <p style="color: black;">Att våga testa på! Jag tycker att man överdramatiserar valet av studier under gymnasiet. Känner man på sig att man
+                                vill plugga men inte är hundra på vad eller vart så är det bara att prova. Jag till exempel läste ett år Nationalekonomi
+                                i Uppsala, fastnade inte, tog mitt pick och pack och testade här istället. No big deal!
+                              </p></li>
+                              <li><h5><strong style="color: black;">Vad är den största skillnaden mellan gymnasiet och högskola?</strong></h5>
+                                <p style="color: black;">Det är ett helt annat <span id="dots-1">...</span><span id="read-more-1">studietempo vilket kanske kan låta avskräckande, men
+                                  eftersom man bara gör saker man valt själv. I vilket fall gäller det att vara beredd på att ta ett större
+                                  individuellt ansvar. Ingen säger åt dig vad du ska göra, bara när det ska vara klart skulle man kunna säga. 
+                                </span></p>
+                              </li>
+                              <li id="read-more-1b"><h5><strong style="color: black;">Vad önskar du att du hade tänkt på redan under gymnasiet?</strong></h5>
+                                <p style="color: black;">Ställ er i bostadskö!! Det tar på riktigt 1 minut att ställa sig i kö. Lägg 5 minuter och
+                                  ställ dig på fem orter som kan vara relevanta. Ställ dig inte bara på ett ställe för att "Du är säker på vart du ska",
+                                  man ändrar sig fort under de åren och i många studentstäder är det ett stramt utbud av bostäder. Ställer du dig däremot 
+                                  i kö redan i ettan på gymnasiet kan du ofta få ett jättebra boende redan från start. 
+                                </p>
+                              </li>
+
+                              <div class="btn btn-outline-dark" id="read-more-btn-1" onclick="readMore('dots-1', 'read-more-1', 'read-more-1b', 'read-more-btn-1')">Läs vidare</div>
+                            </ul>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--######################################################################-->
+                    <!--############################ Student 2 ###############################-->
+                    <!--######################################################################-->
+                    <div class="container flex-container example-student-cont">
+                      <div class="row flex-nowrap" style="padding:30px;">
+                        <div class="col col-sm-3">
+                          <div class="card student-advice-picture">
+                            <img src="/images/student2.jpg" style="border-radius:25%;">
+                          </div>
+                        </div>
+                        <div class="col col-sm-9">
+                          <div class="card text-student-card">
+                            <h2 style="color: black;">Ingen brådska!</h2>
+                            <p style="color: black;"><strong>Aziz är 28 år gammal och pluggar Juristprogrammet vid Uppsala Universitet.
+                              Även han har goda råd att ge dig som i egenskap av gymnasieelev besöker Gymnasiehandboken
+                            </strong>
+                            </p>
+                            <ul>
+                              <li><h5><strong style="color: black;">Om jag går på gymnasiet, vill plugga vidare men vet inte vad jag vill läsa, behöver jag bli stressad?</strong></h5>
+                              <p style="color: black;">Självklart inte! Universitetet står öppet för alla oavsett ålder. Jag tog en 6 år lång paus där jag testade
+                                på olika yrken, reste och blev vuxen. Först när jag var 23-24 insåg jag att jag nog ville läsa juridik. Vissa hävdar ibland att det är fördelaktigt
+                                att komma ut på arbetsmarknaden i ung ålder. Detta är nog delvis sant, men det är viktigare att du hunnit bli trygg i ditt val och känner att 
+                                du kommer ut på en arbetsmarknad du faktiskt vill vara en del av. Det kommer i längden ara mycket viktigare än din ålder. Ta det lugnt och välj när allt känns bra!
+                              </p></li>
+                              <li><h5><strong style="color: black;">Jag inser att jag vill komma in på en utbildning som jag inte har betygen, eller kanske inte ens behörigheten, att komma in på. Vad kan jag göra?</strong></h5>
+                                <p style="color: black;">Det finns massor av lösningar på det problemet! Gäller det dina betyg kan du <span id="dots-2">...</span><span id="read-more-2">Antingen läsa upp dessa i efterhand, vilket fungerar bra för många.
+                                  Ett annat alternativ är att söka med högskoleprovet. De flesta utbildningar har en urvalsgrupp för högskoleprovet, och det är en bra chans för en sådan som mig 
+                                  som under gymnasiet inte var mogen nog att veta vad jag ville och därför inte la ned den tid som krävdes i studierna. Gällande behörighet finns det lösningar 
+                                  på det också, antingen läsa upp i efterhand på samma sätt som för att höja betygen, eller söka sig till de olika typerna av "basår" som 
+                                  många högskolor tillhandahåller. Det kan vara tekniskt basår, juridiskt basår mm. Här läser du upp behörigheten, samt har möjlighet att 
+                                  söka utbildning i en egen urvalsgrupp beroende på dina resultat under basåret. Det är aldrig försent!  
+                                </span></p>
+                              </li>
+
+                              <div class="btn btn-outline-dark" id="read-more-btn-2" onclick="readMore('dots-2', 'read-more-2', 'read-more-2b', 'read-more-btn-2')">Läs vidare</div>
+                            </ul>
+                            
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                    <!--######################################################################-->
+                    <!--############################ Student 3 ###############################-->
+                    <!--######################################################################-->
+                    <div class="container flex-container example-student-cont">
+                      <div class="row flex-nowrap" style="padding:30px;">
+                        <div class="col col-sm-3">
+                          <div class="card student-advice-picture">
+                            <img src="/images/student4.jpg" style="border-radius:25%;">
+                          </div>
+                        </div>
+                        <div class="col col-sm-9">
+                          <div class="card text-student-card">
+                            <h2 style="color: black;">Att plugga blir bara roligare!</h2>
+                            <p style="color: black;"><strong>Carl är 22 år och läser civilingenjörsprogrammet i datateknik. Han har precs avslutat år 3. Här berättar han varför 
+                              han läser till civilingenjör, och vilka tips han har till dig som gymnasieelev. 
+                            </strong>
+                            </p>
+                            <ul>
+                              <li><h5><strong style="color: black;">Visste du med säkerhet att det var ingenjör du skulle studera till?</strong></h5>
+                              <p style="color: black;">Nej, verkligen inte! Min upplevelse är att många inte vet riktigt vad det faktiskt är de tycker om när man fortfarande
+                                befinner sig på gymnasiet. Efter några år är mitt råd följande: tycker du att ett ämne är det minsta intressant 
+                                på gymnasiet så kommer du säkert trivas med det på universitetet. Tycker du till och med att ett ämne är det minsta 
+                                roligt så kommer du att älska det på universitetet. Många kanske drar sig för att verkligen bli ingenjör med motiveringen
+                                "Jag tycker ju Matematiken och fysiken är helt ok, men med tanke på hur mycket svårare det blir på högskola är det nog inget 
+                                för mig". Jag säger tvärtom, att specialisera sig är roligt, och allt är roligare ju längre gången man är. Mitt råd är att ha detta 
+                                med sig i valet av studier, och våga testa det där som du kanske kommer se tillbaka på som livets bästa beslut!
+                              </p></li>
+                              <li><h5><strong style="color: black;">Vissa är osäkra på om de kommer att orka med 5 raka år av studier, och tar istället flertalet "sabbatsår". Är det nödvändigt att slutföra hela utbildningen i ett svep?</strong></h5>
+                                <p style="color: black;">Det är nog en vanlig missuppfattining att <span id="dots-3">...</span><span id="read-more-3">man är "fast" på samma sätt som under gymnasiet. Så
+                                  är det inte! Jag började exemepelvis plugga direkt efter gymnasiet, trots att många förespråkade uppehåll. Det kändes grymt under år
+                                  1 och 2, men under år 3 insåg jag att jag vill se världen en sväng innan jag blir klar och fokuserar på karriären. Sagt och gjort tar jag
+                                  nu ett års studieuppehåll för att jobba och resa lite. Det är absolut inga problem, och för mig känns det grymt bra! 
+                                </span></p>
+                              </li>
+                              <li id="read-more-3b"><h5><strong style="color: black;">Vilket är ditt bästa tips till gymnasieelever som ska påbörja en högskoleutbildning?</strong></h5>
+                                <p style="color: black;">Inse att denna tid kommer att bli en av de absolut bästa i livet. Därför gäller det att våga prova på
+                                  balansen mellan ett aktivt studentliv med rolig fritid, och att prestera i plugget. Om man är för rädd för att missa plugg kan det hända
+                                  att man aldrig riktigt kommer igång med livet på sidan av. Om man är för rädd för att missa något kul kan det hända att man aldrig riktigt
+                                  kommer in i själva plugget. Inse att det inte är liv eller död, laborera lite tills du hittar en balans i vardagen som fungerar för dig! Blir det för mycket,
+                                  ta ett år ledigt som jag! Det är en fantastisk möjlighet att kunna ha dina roligaste år i livet samtidigt som du utbildar dig och lägger grunden
+                                  för ett stiimulerande yrkesliv. Du kommer ångra dig om du inte försöker få ut mesta möjliga av dem båda!
+                                </p>
+                              </li>
+
+                              <div class="btn btn-outline-dark" id="read-more-btn-3" onclick="readMore('dots-3', 'read-more-3', 'read-more-3b', 'read-more-btn-3')">Läs vidare</div>
+                            </ul>
+                            
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+          <div class="modal" id="must-log-in" tabindex="-1" role="dialog" aria-labelledby="must-login-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header"> 
+                  <h5 class="modal-title">Du måste logga in för att ladda dina kurser</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">Vi behöver veta vilket gymnasieprogram du läser för att ladda in din obligatoriska programplan. För att kunna generera betygsförslag och mycket annat registrera ett konto och kom tillbaka hit sen!</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-outline-light" data-dismiss="modal">OK!</button> 
+                </div> 
+              </div>
+            </div>
+          </div>
+
+        </script> 
+
+        
+        
+
+
+
+        <!--===============REGISTRERA-VIEW=====================-->
+        <script id="view_register" type="text/html">
+
+            <div class="registerdiv-outer" style="margin-bottom: 20rem; margin-top: 20px;">
+              <div class="container d-flex justify-content-center">
+                <div class="card signin-up-card"> 
+                  <div class="card-body">
+                    <h2 class="text-center">Skapa konto</h2> 
+                    <form>
+                      <div class="form-outline mb-2">
+                        <input type="text" id="inputSignUpName" class="form-control form-control-lg" />
+                        <label class="form-label" for="inputSignUpName">Namn</label>
+                      </div> 
+                      <div class="form-outline mb-2">
+                        <input type="email" id="inputSignUpEmail" class="form-control form-control-lg" />
+                        <label class="form-label" for="inputSignUpEmail">Mailadress</label>
+                      </div>
+                      <div class="form-outline mb-2" >
+                        <label class="sell_label textfont color6 pr-5 pl-5" for="inputSignUpGrade">Årskurs</label>
+                        <select id="inputSignUpGrade" class="textfont color6 sell_inputs right-4">
+                          <option value="1">1</option>
+                          <option value="2">2</option> 
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                      <div class="form-outline mb-2">
+                        <input type="birthdate" id="inputSignUpBirthdate" class="form-control form-control-lg" />
+                        <label class="form-label textfont" for="inputSignUpBirthdate">Födelsedatum</label>
+                      </div>
+                      <div class="form-outline mb-2" >
+                        <label class="sell_label textfont color6 pr-5 pl-5" for="inputSignUpProgram">Gymnasieprogram</label>
+                        <select id="inputSignUpProgram" class="textfont color6 sell_inputs right-4">
+                          <option value="Naturvetenskap">Naturvetenskap</option>
+                          <option value="Teknikvetenskap">Teknikvetenskap</option>
+                          <option value="Samhällsvetenskap">Samhällsvetenskap</option>
+                          <option value="Ekonomi">Ekonomi</option> 
+                        </select>
+                      </div>
+
+
+                      <div class="form-outline mb-2">
+                        <input type="password" id="passwordInput1" class="form-control form-control-lg" />
+                        <label class="form-label textfont" for="passwordInput1">Lösenord</label>
+                      </div>
+
+                      <div class="form-outline mb-2">
+                        <input type="password" id="inputSignUpPassword" class="form-control form-control-lg" />
+                        <label class="form-label textfont" for="inputSignUpPassword">Repetera lösenord</label>
+                      </div> 
+                      <div class="d-flex justify-content-center">
+                        <div class="btn btn-outline-light btn-lg" onclick="signUp()">Registrera dig</div>
+                      </div>
+
+                      <p class="text-center" style="margin-bottom: 10px; margin-top: 20px; color:white" >Har du redan ett konto? </p>
+                      <div class="d-flex justify-content-center">
+                        <div class="btn btn-outline-light btn-lg" onclick="showLogInView()">Logga in</div>
+                      </div> 
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>  
+        </script>
+
+
+
+
+        <!--================= Logga in view=======================-->
+        <script id="view_login" type="text/html">
+            <div class="container d-flex justify-content-center" style="margin-bottom: 20rem; padding:30px;">
+              <!-- <img src="images/Icons/logotype_no_background.png" id="login-logo-footprint"> -->
+              <div class="card signin-up-card">
+                <div class="card-body">
+                  <h2 class="text-center" style="margin-bottom: 40px;">Logga in</h2>
+                  <form>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="inputLogInEmail" class="form-control textfont" />
+                      <label class="form-label textfont" for="inputLogInEmail">Mailadress</label>
+                    </div>
+            
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <input type="password" id="inputLogInPassword" class="form-control textfont" />
+                      <label class="form-label textfont" for="inputLogInPassword">Lösenord</label>
+                    </div>
+                    <p class="text-center" style="margin-bottom:40px"><a href="#">Jag har glömt mitt lösenord</a></p>
+            
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4" style="margin-top: 50px;">
+                      <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                          <label class="form-check-label textfont" for="form2Example31"> Kom ihåg mig </label>
+                        </div>
+                      </div>
+            
+                      <div class="col">
+                        <!-- Simple link -->
+                        
+                      </div>
+                    </div>
+            
+                    <!-- Submit button -->
+                    <div class="text-center">
+                      <div class="btn btn-lg btn-outline-light" onclick="logIn()">Logga in</div> 
+            
+                    <!-- Register buttons -->
+                    <div class="text-center" style="margin-top: 40px;">
+                      <p>Har du inte mågot konto hos oss? Skaffa ett på bara en minut!</p>
+                      <div class="btn btn-lg btn-outline-light" onclick="showRegisterView()">Registrera</div>
+
+                    </div> 
+                  </form>
+                </div>
+              </div>
+            </div>
+          </script> 
+        
+  <div class="panel bottom-panel">
+    <div class="container bp-container">
+        <div class="row" style="padding-top: 20px;">
+          <div class="col col-sm-6 bp-col">
+            <h5>För dig som elev</h5>
+            <a class="bp-link" id="bp-home-link" href="#">Min sida</a>
+            <br>
+            <a class="bp-link" id="bp-subjects-link" href="#">Ämnen & Kurser</a>
+            <br>
+            <a class="bp-link" id="bp-contact-link" href="#">Kontakta oss</a>
+          </div>
+          <div class="col col-sm-6 bp-col">
+            <h5>För framtiden</h5>
+            <a class="bp-link" id="bp-calcav-link" href="#">Beräkna snitt</a>
+            <br>
+            <a class="bp-link" id="bp-calcreq-link" href="#">Beräkna betygskrav</a>
+            <br>
+            <a class="bp-link" id="bp-tips-link" href="#">Tips från universitetet</a> 
+            <br>
+          </div>
+        </div>
+    </div> 
+  </div>
+    
+</body> 
+</html>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,300;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,300;1,500;1,600&family=Montserrat:ital,wght@0,200;0,400;0,500;1,200;1,300&display=swap');
+
+body {
+    /*Grönt tema*/ 
+/* background-color: #c7e1ff;  */
+background-color: white;
+/* font-family: 'Libre Franklin', sans-serif; */
+font-family: 'Montserrat', sans-serif; 
+color: white;
+/* font-family: 'Vietnamese', sans-serif;   */
+
+
+} 
+.main-h1 {
+    font-size: 50px;
+}
+
+.navbar-custom{
+    background-color:#004691;  
+
+    
+}
+.navbar-custom .navbar-brand {
+    color: white; 
+    
+}
+.carousel-item {
+    height: 28rem;
+    background-color: #777; 
+    position: relative;
+}
+.startcar-cont {
+    padding-bottom: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.overlay-image-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+#navbar {
+    width: 100vw;
+    padding-right: 3vw;
+    height: 10vh;
+} 
+
+.navbar-collapse {
+    background-color: #004691;
+} 
+
+.navbar_button {
+    color: white;
+}
+.dropdown-item:hover { 
+    background-color: #1180ff;
+}
+.avcalc-container-outer {
+    max-width: 800px;
+    content: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    background-color: #004691;
+}
+.col-plan-content {
+    justify-content: left;
+}
+
+.form-outline {
+    padding-top: 10px;
+}
+.form-label {
+    padding-right: 10px;
+}
+
+.flex-container {
+margin-top: 30px;
+margin-bottom: 30px;
+/* position: absolute; */
+justify-content: center;
+
+
+
+}
+.startcard {
+    border-color: white;
+    border-radius: 15px; 
+    border-width: 2px;
+    padding: 10px;
+    background-color: #004691;
+    margin-bottom: 50px;
+    
+}
+
+.card-body {
+    padding: 20px;
+    justify-content: center;
+}
+.startrow {
+    justify-content: center; 
+}
+.start-images {
+    position: relative;
+    background-position: center;
+    width: 50vh;
+    border-radius: 10px;
+ 
+}
+.bg-content {
+    position: relative;
+    /* background-position: center;
+    background-size: cover; */
+    height: 16rem;
+    width: 26rem;
+    margin: 10px;
+    padding: 30px;
+    background-color: black;
+    justify-content: center;
+
+    
+}
+.custom-img-container {
+    position: relative;
+    width: 34rem;
+    height: 32rem;
+    justify-content: center;
+    padding: 30px;
+} 
+.startpage-img-text {
+    position: absolute;
+    padding-top: 16px;
+    width: 24rem;
+
+}
+.starttext-container {
+    margin-bottom: 50px;
+}
+.starttext-card {
+    border: none;
+    color: black;
+}
+.starttext-card-body {
+    color: black;
+}
+.bottom-panel {
+    position:absolute;
+    /* margin-top:200px; */
+    /* bottom: -800px; */
+    width: 100%;
+    height: 12rem;
+    background-color: #004691;
+}
+.bp-col {
+    text-align: center;
+    color: white;
+    padding: 10px;
+} 
+.bp-link {
+    color: white;
+    
+}
+
+#profilepic {
+    height: 10rem;
+    width: 8rem;   
+    border-radius: 50%;
+}
+.profile-card {
+    background-color:#ddeaf9 ;
+    color: black;
+
+
+
+}
+#profile-card-cont {
+    margin-top: 40px;
+
+}
+
+#mand-cou-cont {
+    margin-top: 20px;
+
+}
+.modal {
+    color: black; 
+}
+/* #mandcou-table {
+    margin-right: 5px;
+} */
+#mand-card-cont {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* .container {
+    justify-items: center;
+} */
+.container-fluid {
+padding: 20px;
+
+}
+.inner-row-2 {
+    margin-top: 30px;
+}
+#left-profile {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.left-menu-custom {
+    background-color: #6db4ff;
+    max-width: 200px;
+    min-height: 100%;
+
+
+}
+.planview-opt-list {
+
+    /* font-size: 20px; */
+    color: white;
+}
+
+.mylist-items {
+    background-color: #6db4ff;
+    border: none;
+    color: white;
+}
+.plan-results-card {
+    background-color: #004691;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.krav-examen {
+    padding: 10px;
+}
+/* .krav-examen-punkter {
+
+
+} */
+#sidemenu-plan {
+    position: sticky;
+    top: 0;
+    height: 80vh;
+
+}
+#sidemenu-subjects {
+    position: sticky;
+    top:0;
+    height: 100vh;
+}
+#courses-to-read-outer {
+    background-color:#004691;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#courses-to-read-bottom {
+    padding-top: 5px;
+}
+#result-required-container {
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+    
+}
+
+.plan-image-top {
+    height: 30rem; 
+    position:relative;
+    width: 100%;
+    background-color: grey;
+    margin-right: 10px;
+}
+
+.uni-student-tips {
+    position: relative;
+}
+.example-student-cont {
+    margin-right: 50px; 
+    margin-left: 50px;
+    margin-bottom: 50px;
+    width: 60rem;
+    border: 2px black solid;
+    background-color: #004691;
+    display: flex;
+    flex-direction: column;
+}
+.text-student-card {
+    text-align: center;
+    padding: 20px;
+}
+.student-advice-picture {
+    border-radius: 25%;
+    
+}
+#read-more-1 {
+    display: none;
+}
+#read-more-1b {
+    display: none;
+}
+#read-more-2 {
+    display: none;
+}
+#read-more-2b {
+    display: none;
+}
+#read-more-3 {
+    display: none;
+}
+#read-more-3b {
+    display: none;
+}
+#read-more-cent-inn {
+    display: none;
+}
+#read-more-cent-inn-2 {
+    display: none;
+}
+.contact-form-card {
+    background-color: #004691;
+    
+}
+.contact-form-container {
+    margin-bottom: 50px;
+}
+.contact-form {
+    padding: 50px;
+}
+#character-counter {
+    font-style:italic;
+    font-size: 1rem;
+}
+.courses-links {
+    padding: 10px;
+    border-radius: 10px;
+    border: solid white;
+    background-color:#004691;
+}
+.course-links-container {
+    width: 25rem;
+    left: 0;
+}
+.subject-page-card {
+    border: solid 2px black;
+    background-color:#d5e7fb
+}
+.subject-card-body {
+    color: black;
+}
+.signin-up-card {
+    background-color: #004691;
+    width: 50rem; 
+    margin-top: 40px;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
